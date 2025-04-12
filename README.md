@@ -3,6 +3,20 @@
 ## Problem Statement:
 Access to quality healthcare remains a major challenge for people living in rural, remote, and underserved regions. Individuals — including those working in extreme and harsh conditions, such as army personnel and field workers — often face difficulties in accessing immediate medical guidance, early diagnosis, and timely healthcare facilities. These challenges contribute to delayed treatments, preventable complications, and increased health risks. There is a critical need for a solution that ensures early detection, preventive care, and access to essential health resources, regardless of geographical barriers.
 
+
+#DNA Sequencing
+Identifies the exact order of nucleotides.
+Useful for understanding genetic makeup and hereditary information.
+#Disease Predictions
+Analyzes genetic variations.
+Helps predict the likelihood of developing specific diseases and conditions.
+#Drug Recommendations
+Provides personalized drug recommendations.
+Based on your genetic profile to optimize treatment plans for better health outcomes.
+#Lifestyle Changes
+Guides lifestyle changes using genetic insights.
+
+Helps you make informed decisions to improve health and well-being.
 ## Solution Overview:
 SmartHealth is an AI-driven virtual health assistant designed to bridge the healthcare accessibility gap. It offers an integrated platform where users can:
 - Analyze symptoms and receive potential health condition insights.
