@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>SmartHealth</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    .hover-zoom:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="font-roboto bg-gray-100">
+  <!-- Language Selector -->
+  <div class="container mx-auto px-4 py-4 flex justify-end">
+    <select id="language-selector" class="border border-gray-300 rounded-md p-2">
+      <option value="en">English</option>
+      <option value="hi">हिन्दी (Hindi)</option>
+      <option value="te">తెలుగు (Telugu)</option>
+      <option value="ta">தமிழ் (Tamil)</option>
+    </select>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a class="text-2xl font-bold text-green-600" href="index.html">SmartHealth</a>
+      <button class="text-gray-700 md:hidden" id="menuButton">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="hidden md:flex space-x-6" id="navLinks">
+        <li><a class="text-gray-700 hover:text-green-600" href="index.html">Home</a></li>
+        <li><a class="text-gray-700 hover:text-green-600" href="index.html">About</a></li>
+        <li><a class="text-gray-700 hover:text-green-600" href="services.html">Services</a></li>
+        <li><a class="text-gray-700 hover:text-green-600" href="Lifestyles.html">Lifestyle Tips</a></li>
+        <li><a class="text-gray-700 hover:text-green-600" href="first-aid.html">First Aid</a></li>
+        <li><a class="text-gray-700 hover:text-green-600" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <ul class="md:hidden hidden flex-col space-y-4 px-4 py-4 bg-white shadow-md" id="mobileNavLinks">
+      <li><a class="text-gray-700 hover:text-green-600" href="index.html">Home</a></li>
+      <li><a class="text-gray-700 hover:text-green-600" href="index.html">About</a></li>
+      <li><a class="text-gray-700 hover:text-green-600" href="services.html">Services</a></li>
+      <li><a class="text-gray-700 hover:text-green-600" href="Lifestyles.html">Lifestyle Tips</a></li>
+      <li><a class="text-gray-700 hover:text-green-600" href="first-aid.html">First Aid</a></li>
+      <li><a class="text-gray-700 hover:text-green-600" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Lifestyle Tips Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12" id="lifestyle-title">Lifestyle Tips for a Healthier Life</h2>
+      <p class="text-gray-700 mb-8 text-center" id="lifestyle-description">
+        SmartHealth provides preventive advice and tailored lifestyle tips on diet, exercise, and stress management to promote wellness. We also offer insights on over-the-counter medications, including usage and precautions. Equipped with a vast health knowledge base, SmartHealth empowers users to make informed health decisions and take proactive steps for improved well-being.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <article class="bg-white p-6 rounded-lg shadow-md hover-zoom">
+          <img alt="A plate filled with a variety of healthy foods" class="rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/2WHyWYzRkF4pYYBubKFisGA7Q8xT_EtAQYiPkP3MbF0.jpg" width="300"/>
+          <h3 class="text-xl font-semibold mb-2" id="tip1-title">Healthy Eating</h3>
+          <p class="text-gray-600 mb-4" id="tip1-description">Incorporate a balanced diet with plenty of fruits, vegetables, and whole grains. Avoid processed foods and sugary drinks.</p>
+          <a class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold mt-4 inline-block" href="healthy-eating.html">Read more</a>
+        </article>
+        <article class="bg-white p-6 rounded-lg shadow-md hover-zoom">
+          <img alt="A person jogging in a park" class="rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/qE9cRyOUuCc49NS3cyRxcwyP3JBCpd-PgkOoyhQplRY.jpg" width="300"/>
+          <h3 class="text-xl font-semibold mb-2" id="tip2-title">Regular Exercise</h3>
+          <p class="text-gray-600 mb-4" id="tip2-description">Engage in at least 30 minutes of moderate exercise most days of the week. Activities like walking, jogging, and cycling are great options.</p>
+          <a class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold mt-4 inline-block" href="fit.html">Read more</a>
+        </article>
+        <article class="bg-white p-6 rounded-lg shadow-md hover-zoom">
+          <img alt="A person meditating" class="rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/2xoiSNVMYn6t687PS6p52Und8JEKhhEFoeuLq7Uzaos.jpg" width="300"/>
+          <h3 class="text-xl font-semibold mb-2" id="tip3-title">Stress Management</h3>
+          <p class="text-gray-600 mb-4" id="tip3-description">Practice relaxation techniques such as deep breathing, meditation, and yoga to manage stress effectively.</p>
+          <a class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold mt-4 inline-block" href="#">Read more</a>
+        </article>
+        <article class="bg-white p-6 rounded-lg shadow-md hover-zoom">
+          <img alt="A cozy bedroom" class="rounded-lg mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/I73R3Uf6wJGCy9PmT_Cn8sUSdxDePGJau4_hdDMvo6Q.jpg" width="300"/>
+          <h3 class="text-xl font-semibold mb-2" id="tip4-title">Adequate Sleep</h3>
+          <p class="text-gray-600 mb-4" id="tip4-description">Aim for 7-9 hours of sleep each night. Establish a regular sleep schedule and create a restful environment.</p>
+          <a class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold mt-4 inline-block" href="sleep.html">Read more</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto px-4 text-center">
+      <p>©SmartHealth. All rights reserved.</p>
+      <div class="flex justify-center space-x-4 mt-4">
+        <a class="text-white hover:text-green-600" href="#"><i class="fab fa-facebook-f"></i></a>
+        <a class="text-white hover:text-green-600" href="#"><i class="fab fa-twitter"></i></a>
+        <a class="text-white hover:text-green-600" href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a class="text-white hover:text-green-600" href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Language Translations
+    const translations = {
+      en: {
+        lifestyleTitle: "Lifestyle Tips for a Healthier Life",
+        lifestyleDescription: "SmartHealth provides preventive advice and tailored lifestyle tips on diet, exercise, and stress management to promote wellness. We also offer insights on over-the-counter medications, including usage and precautions. Equipped with a vast health knowledge base, SmartHealth empowers users to make informed health decisions and take proactive steps for improved well-being.",
+        tip1Title: "Healthy Eating",
+        tip1Description: "Incorporate a balanced diet with plenty of fruits, vegetables, and whole grains. Avoid processed foods and sugary drinks.",
+        tip2Title: "Regular Exercise",
+        tip2Description: "Engage in at least 30 minutes of moderate exercise most days of the week. Activities like walking, jogging, and cycling are great options.",
+        tip3Title: "Stress Management",
+        tip3Description: "Practice relaxation techniques such as deep breathing, meditation, and yoga to manage stress effectively.",
+        tip4Title: "Adequate Sleep",
+        tip4Description: "Aim for 7-9 hours of sleep each night. Establish a regular sleep schedule and create a restful environment."
+      },
+      hi: {
+        lifestyleTitle: "स्वस्थ जीवन के लिए जीवनशैली सुझाव",
+        lifestyleDescription: "स्मार्ट हेल्थ निवारक सलाह और आहार, व्यायाम और तनाव प्रबंधन पर अनुकूलित जीवनशैली सुझाव प्रदान करता है। हम ओवर-द-काउंटर दवाओं पर जानकारी भी प्रदान करते हैं, जिसमें उपयोग और सावधानियाँ शामिल हैं। एक विशाल स्वास्थ्य ज्ञान आधार के साथ, स्मार्ट हेल्थ उपयोगकर्ताओं को सूचित स्वास्थ्य निर्णय लेने और बेहतर कल्याण के लिए सक्रिय कदम उठाने के लिए सशक्त बनाता है।",
+        tip1Title: "स्वस्थ आहार",
+        tip1Description: "फलों, सब्जियों और साबुत अनाज से भरपूर संतुलित आहार शामिल करें। प्रसंस्कृत खाद्य पदार्थों और मीठे पेय से बचें।",
+        tip2Title: "नियमित व्यायाम",
+        tip2Description: "सप्ताह के अधिकांश दिनों में कम से कम 30 मिनट का मध्यम व्यायाम करें। चलना, दौड़ना और साइकिल चलाना अच्छे विकल्प हैं।",
+        tip3Title: "तनाव प्रबंधन",
+        tip3Description: "तनाव को प्रभावी ढंग से प्रबंधित करने के लिए गहरी सांस लेने, ध्यान और योग जैसी विश्राम तकनीकों का अभ्यास करें।",
+        tip4Title: "पर्याप्त नींद",
+        tip4Description: "हर रात 7-9 घंटे की नींद का लक्ष्य रखें। एक नियमित नींद का कार्यक्रम स्थापित करें और एक आरामदायक वातावरण बनाएं।"
+      },
+      te: {
+        lifestyleTitle: "ఆరోగ్యకరమైన జీవితానికి జీవనశైలి సూచనలు",
+        lifestyleDescription: "స్మార్ట్ హెల్త్ ఆరోగ్యాన్ని ప్రోత్సహించడానికి ఆహారం, వ్యాయామం మరియు ఒత్తిడి నిర్వహణపై నिवारక సలహాలు మరియు అనుకూలిత జీవనశైలి సూచనలు అందిస్తుంది. మేము ఉపయోగం మరియు జాగ్రత్తలతో సహా ఓవర్-ది-కౌంటర్ మందులపై సమాచారం కూడా అందిస్తాము. విస్తృత ఆరోగ్య జ్ఞాన ఆధారంతో, స్మార్ట్ హెల్త్ వినియోగదారులకు సమాచార ఆరోగ్య నిర్ణయాలను తీసుకోవడానికి మరియు మెరుగైన ఆరోగ్యానికి ప్రాక్టివ్ చర్యలు తీసుకోవడానికి శక్తిని ఇస్తుంది.",
+        tip1Title: "ఆరోగ్యకరమైన ఆహారం",
+        tip1Description: "ఫలాలు, కూరగాయలు మరియు సంపూర్ణ ధాన్యాలతో కూడిన సమతుల్య ఆహారాన్ని చేర్చండి. ప్రాసెస్ చేసిన ఆహారాలు మరియు చక్కెర పానీయాలను నివారించండి.",
+        tip2Title: "నియమిత వ్యాయామం",
+        tip2Description: "సप्तాహంలో ఎక్కువ భాగం రోజుకు కనీసం 30 నిమిషాల మోస్తరు వ్యాయామం చేయండి. నడక, పరుగెత్తడం మరియు సైక్లింగ్ వంటి కార్యకలాపాలు మంచి ఎంపికలు.",
+        tip3Title: "ఒత్తిడి నిర్వహణ",
+        tip3Description: "ఒత్తిడిని సమర్థవంతంగా నిర్వహించడానికి లోతైన శ్వాస, ధ్యానం మరియు యోగా వంటి విశ్రాంతి పద్ధతులను అభ్యాసం చేయండి.",
+        tip4Title: "సరిపడిన నిద్ర",
+        tip4Description: "ప్రతి రాత్రి 7-9 గంటల నిద్రను లక్ష్యంగా పెట్టుకోండి. ఒక నియమిత నిద్ర షెడ్యూల్‌ను స్థాపించండి మరియు విశ్రాంతి వాతావరణాన్ని సృష్టించండి."
+      },
+      ta: {
+        lifestyleTitle: "ஆரோக்கியமான வாழ்க்கைக்கான வாழ்க்கை முறை குறிப்புகள்",
+        lifestyleDescription: "ஸ்மார்ட் ஹெல்த் ஆரோக்கியத்தை மேம்படுத்த உணவு, உடற்பயிற்சி மற்றும் மன அழுத்த மேலாண்மையில் தடுப்பு ஆலோசனைகள் மற்றும் தனிப்பயனாக்கப்பட்ட வாழ்க்கை முறை குறிப்புகளை வழங்குகிறது. நாங்கள் பயன்பாடு மற்றும் எச்சரிக்கைகளை உள்ளடக்கியதாக மருந்துகள் பற்றிய தகவல்களையும் வழங்குகிறோம். பரந்த அளவிலான சுகாதார அறிவியல் அடிப்படையுடன், ஸ்மார்ட் ஹெல்த் பயனாளர்களுக்கு தகவல் அடிப்படையிலான சுகாதார முடிவுகளை எடுக்கவும், மேம்பட்ட நலனுக்காக முன்னேற்ற நடவடிக்கைகளை எடுக்கவும் அதிகாரம் அளிக்கிறது.",
+        tip1Title: "ஆரோக்கியமான உணவு",
+        tip1Description: "பழங்கள், காய்கறிகள் மற்றும் முழு தானியங்களுடன் கூடிய சமநிலையுடைய உணவை சேர்க்கவும். செயலாக்கப்பட்ட உணவுகள் மற்றும் சர்க்கரை பானங்களை தவிர்க்கவும்.",
+        tip2Title: "வழக்கமான உடற்பயிற்சி",
+        tip2Description: "வாரத்தில் பெரும்பாலும் குறைந்தது 30 நிமிடங்கள் மிதமான உடற்பயிற்சியில் ஈடுபடவும். நடனம், ஓடுதல் மற்றும் சைக்கிள் ஓட்டுதல் போன்ற செயல்பாடுகள் சிறந்த விருப்பங்கள்.",
+        tip3Title: "மன அழுத்த மேலாண்மை",
+        tip3Description: "மன அழுத்தத்தை திறமையாக நிர்வகிக்க ஆழமான மூச்சு, தியானம் மற்றும் யோகா போன்ற ஓய்வு நுட்பங்களை பயிற்சி செய்யவும்.",
+        tip4Title: "சரியான தூக்கம்",
+        tip4Description: "ஒவ்வொரு இரவும் 7-9 மணி நேரம் தூங்க வேண்டும். ஒரு ஒழுங்கான தூக்க அட்டவணையை உருவாக்கவும் மற்றும் ஓய்வான சூழலை உருவாக்கவும்."
+      }
+    };
+
+    // Function to change language
+    function changeLanguage(language) {
+      const translation = translations[language];
+      document.getElementById("lifestyle-title").innerText = translation.lifestyleTitle;
+      document.getElementById("lifestyle-description").innerText = translation.lifestyleDescription;
+      document.getElementById("tip1-title").innerText = translation.tip1Title;
+      document.getElementById("tip1-description").innerText = translation.tip1Description;
+      document.getElementById("tip2-title").innerText = translation.tip2Title;
+      document.getElementById("tip2-description").innerText = translation.tip2Description;
+      document.getElementById("tip3-title").innerText = translation.tip3Title;
+      document.getElementById("tip3-description").innerText = translation.tip3Description;
+      document.getElementById("tip4-title").innerText = translation.tip4Title;
+      document.getElementById("tip4-description").innerText = translation.tip4Description;
+    }
+
+    // Event listener for language selection
+    document.getElementById("language-selector").addEventListener("change", function() {
+      const selectedLanguage = this.value;
+      changeLanguage(selectedLanguage);
+    });
+
+    // Initialize with default language (English)
+    changeLanguage("en");
+
+    // Mobile menu toggle
+    document.getElementById("menuButton").addEventListener("click", function () {
+      const mobileNavLinks = document.getElementById("mobileNavLinks");
+      mobileNavLinks.classList.toggle("hidden");
+    });
+  </script>
+</body>
+</html>

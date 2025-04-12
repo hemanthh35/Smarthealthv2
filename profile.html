@@ -1,0 +1,229 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - SmartHealth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head><nav class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+     <a class="text-2xl font-bold text-green-600" href="#">
+      SmartHealth
+     </a>
+     <div class="md:hidden">
+      <button class="text-gray-700 focus:outline-none" id="nav-toggle">
+       <i class="fas fa-bars">
+       </i>
+      </button>
+     </div>
+     <ul class="hidden md:flex space-x-6 items-center" id="nav-menu">
+      <li>
+       <a class="text-gray-700 hover:text-green-600" href="index.html">
+        Home
+       </a>
+      </li>
+      <li>
+       <a class="text-gray-700 hover:text-green-600" href="about.html">
+        About
+       </a>
+      </li>
+      <li>
+       <a class="text-gray-700 hover:text-green-600" href="services.html">
+        Services
+       </a>
+      </li>
+      <li>
+       <a class="text-gray-700 hover:text-green-600" href="lifestyles.html">
+        Lifestyles
+       </a>
+      </li>
+      <li>
+       <a class="text-gray-700 hover:text-green-600" href="contact.html">
+        Contact
+       </a>
+      </li>
+      <li>
+       <a class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold" href="signin.html">
+        Sign In
+       </a>
+      </li>
+      <li>
+       <a class="text-gray-700 hover:text-green-600" href="profile.html">
+        <i class="fas fa-user-circle text-2xl">
+        </i>
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div class="hidden md:hidden bg-white shadow-md" id="nav-menu-mobile">
+     <ul class="flex flex-col space-y-4 p-4">
+      <li>
+       <a class="text-gray-700 hover:text-green-600" href="index.html">
+        Home
+       </a>
+      </li>
+      <li>
+       <a class="text-gray-700 hover:text-green-600" href="about.html">
+        About
+       </a>
+      </li>
+      <li>
+       <a class="text-gray-700 hover:text-green-600" href="services.html">
+        Services
+       </a>
+      </li>
+      <li>
+       <a class="text-gray-700 hover:text-green-600" href="lifestyles.html">
+        Lifestyles
+       </a>
+      </li>
+      <li>
+       <a class="text-gray-700 hover:text-green-600" href="contact.html">
+        Contact
+       </a>
+      </li>
+      <li>
+       <a class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold" href="signin.html">
+        Sign In
+       </a>
+      </li>
+      <li>
+       <a class="text-gray-700 hover:text-green-600" href="profile.html">
+        <i class="fas fa-user-circle text-2xl">
+        </i>
+       </a>
+      </li>
+     </ul>
+    </div>
+   </nav>
+<body class="bg-gray-100 font-roboto">
+    <div class="container mx-auto px-4 py-16">
+        <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold text-center mb-8">User Profile</h2>
+            
+            <!-- Back Button -->
+            <div class="text-center mb-4">
+                <a href="index.html" class="bg-gray-600 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition duration-300">
+                    Back to Home
+                </a>
+            </div>
+            
+            <div id="profile-details" class="space-y-6">
+                <!-- User profile details will be populated here -->
+            </div>
+            <div class="text-center mt-4">
+                <button id="editButton" class="w-full bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition duration-300">
+                    Edit Profile
+                </button>
+            </div>
+            <div class="text-center mt-4">
+                <a href="signin.html" class="text-green-600 hover:underline">Sign Out</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to display user profile details
+        window.onload = function() {
+            const userEmail = localStorage.getItem('loggedInUser'); // Get the logged-in user's email from localStorage
+            const user = JSON.parse(localStorage.getItem(userEmail)); // Get user data from localStorage using email
+
+            if (user) {
+                // Populate user details
+                const profileDetailsDiv = document.getElementById('profile-details');
+                profileDetailsDiv.innerHTML = `
+                    <p><strong>Name:</strong> ${user.name}</p>
+                    <p><strong>Email:</strong> ${user.email}</p>
+                    <p><strong>Phone Number:</strong> ${user.phone}</p>
+                    <p><strong>Address:</strong> ${user.address}</p>
+                    <p><strong>Gender:</strong> ${user.gender}</p>
+                    <p><strong>Age:</strong> ${user.age}</p>
+                `;
+                // Enable the Edit button if user data exists
+                document.getElementById('editButton').style.display = 'block';
+            } else {
+                // If no user data is found, show an error message
+                document.getElementById('profile-details').innerHTML = '<p class="text-red-600">No user data found. Please sign in again.</p>';
+            }
+        };
+
+        // Edit button functionality
+        document.getElementById('editButton').addEventListener('click', function() {
+            const userEmail = localStorage.getItem('loggedInUser'); // Get the logged-in user's email
+            const user = JSON.parse(localStorage.getItem(userEmail)); // Get user data from localStorage using email
+
+            if (user) {
+                // Populate input fields with the current user data for editing
+                const editForm = `
+                    <h2 class="text-2xl font-bold text-center mb-8">Edit Profile</h2>
+                    <form id="editForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700">Full Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" value="${user.name}" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" value="${user.email}" readonly required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700">Phone Number</label>
+                            <input type="text" id="phone" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" value="${user.phone}" required>
+                        </div>
+                        <div>
+                            <label for="address" class="block text-gray-700">Address</label>
+                            <input type="text" id="address" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" value="${user.address}" required>
+                        </div>
+                        <div>
+                            <label for="age" class="block text-gray-700">Age</label>
+                            <input type="number" id="age" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" value="${user.age}" required>
+                        </div>
+                        <div>
+                            <label for="gender" class="block text-gray-700">Gender</label>
+                            <select id="gender" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" required>
+                                <option value="male" ${user.gender === 'male' ? 'selected' : ''}>Male</option>
+                                <option value="female" ${user.gender === 'female' ? 'selected' : ''}>Female</option>
+                                <option value="other" ${user.gender === 'other' ? 'selected' : ''}>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition duration-300">
+                                Save Changes
+                            </button>
+                        </div>
+                    </form>
+                `;
+
+                // Replace profile details with the edit form
+                document.getElementById('profile-details').innerHTML = editForm;
+                document.getElementById('editButton').style.display = 'none'; // Hide Edit button while editing
+            }
+        });
+
+        // Save updated data to localStorage
+        document.body.addEventListener('submit', function(event) {
+            if (event.target && event.target.id === 'editForm') {
+                event.preventDefault();
+
+                const userEmail = localStorage.getItem('loggedInUser');
+                const updatedUser = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    address: document.getElementById('address').value,
+                    age: document.getElementById('age').value,
+                    gender: document.getElementById('gender').value,
+                    password: JSON.parse(localStorage.getItem(userEmail)).password, // Preserve original password
+                    userType: JSON.parse(localStorage.getItem(userEmail)).userType, // Preserve original user type
+                };
+
+                localStorage.setItem(userEmail, JSON.stringify(updatedUser)); // Save the updated data in localStorage
+                alert("Profile updated successfully!");
+
+                // Re-display the updated profile details
+                window.location.reload(); // Refresh the page to show updated data
+            }
+        });
+    </script>
+</body>
+</html>

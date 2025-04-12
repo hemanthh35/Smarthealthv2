@@ -1,0 +1,205 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #007BFF; /* Header background color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding around the header */
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Center items vertically */
+}
+
+header .logo {
+    font-size: 24px; /* Logo font size */
+    font-weight: bold; /* Bold logo */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Flexbox for horizontal layout */
+    gap: 15px; /* Space between nav items */
+}
+
+nav ul li {
+    display: inline; /* Inline display for list items */
+}
+
+nav ul li a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover; /* Background image */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    padding: 100px 20px; /* Padding for hero section */
+}
+
+.hero h1 {
+    font-size: 36px; /* Main heading font size */
+}
+
+.hero p {
+    font-size: 18px; /* Subheading font size */
+}
+
+.cta-button {
+    background: #28A745; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.features {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-around; /* Space between features */
+    padding: 40px 20px; /* Padding for features section */
+    background: #f8f9fa; /* Light background color */
+}
+
+.feature {
+    text-align: center; /* Center text in feature boxes */
+    width: 30%; /* Width of each feature box */
+}
+
+.feature h2 {
+    font-size: 24px; /* Feature heading font size */
+}
+
+.feature p {
+    margin: 10px 0; /* Margin for feature description */
+}
+
+.feature-button {
+    background: #007BFF; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 15px; /* Button padding */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.how-it-works {
+    padding: 40px 20px; /* Padding for how it works section */
+    text-align: center; /* Center text */
+}
+
+.how-it-works h2 {
+    font-size: 28px; /* Heading font size */
+}
+
+.how-it-works ol {
+    padding-left: 20px; /* Indent ordered list */
+}
+
+.testimonials {
+    background: #e9ecef; /* Light gray background */
+    padding: 40px 20px; /* Padding for testimonials section */
+    text-align: center; /* Center text */
+}
+
+.testimonials blockquote {
+    margin: 20px 0; /* Margin for blockquotes */
+    font-style: italic; /* Italic text for quotes */
+}
+
+.resources {
+    padding: 40px 20px; /* Padding for resources section */
+    text-align: center; /* Center text */
+}
+
+.resources h2 {
+    font-size: 28px; /* Heading font size */
+}
+
+.resources ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.resources ul li {
+    margin: 10px 0; /* Margin for list items */
+}
+
+footer {
+    background: #343a40; /* Dark background for footer */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    padding: 20px 0; /* Padding for footer */
+}
+
+.footer-links {
+    margin-bottom: 10px; /* Margin below footer links */
+}
+
+.footer-links a {
+    color: white; /* Link color */
+    margin: 0 10px; /* Margin between links */
+    text-decoration: none; /* Remove underline */
+}
+
+.social-media a {
+    color: white; /* Social media link color */
+    margin: 0 10px; /* Margin between links */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Symptom Checker Page Styles */
+.symptom-checker {
+    max-width: 800px; /* Maximum width for the symptom checker section */
+    margin: 20px auto; /* Center the section */
+    padding: 20px; /* Padding inside the section */
+    background: #ffffff; /* White background for the section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.symptom-checker h1 {
+    font-size: 32px; /* Main heading font size */
+}
+
+.symptom-checker p {
+    font-size: 18px; /* Paragraph font size */
+}
+
+.symptom-checker label {
+    display: block; /* Block display for labels */
+    margin: 10px 0 5px; /* Margin for labels */
+}
+
+.symptom-checker textarea {
+    width: 100%; /* Full width for textarea */
+    padding: 10px; /* Padding inside textarea */
+    border: 1px solid #ccc; /* Border for textarea */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.symptom-checker select {
+    width: 100%; /* Full width for select */
+    padding: 10px; /* Padding inside select */
+    border: 1px solid #ccc; /* Border for select */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.submit-button {
+    background: #007BFF; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 15px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.results {
+    margin-top: 20px; /* Margin above results section */
+    padding: 10px; /* Padding inside results section */
+    background: #f8f9fa; /* Light background color */
+    border-radius: 5px; /* Rounded corners */
+}

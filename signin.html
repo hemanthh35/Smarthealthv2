@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - SmartHealth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-roboto">
+    <div class="container mx-auto px-4 py-16">
+        <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold text-center mb-8">Sign In</h2>
+            <form id="signinForm" class="space-y-6">
+                <div>
+                    <label for="email" class="block text-gray-700">Email</label>
+                    <input type="email" id="email" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" required>
+                </div>
+                <div>
+                    <label for="password" class="block text-gray-700">Password</label>
+                    <input type="password" id="password" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" required>
+                </div>
+                <div>
+                    <button type="submit" class="w-full bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition duration-300">Sign In</button>
+                </div>
+                <div id="feedback" class="text-red-600 text-center mt-4 hidden"></div>
+            </form>
+            <p class="text-center mt-4">Don't have an account? <a href="signup.html" class="text-green-600 hover:underline">Sign Up</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("signinForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const feedback = document.getElementById("feedback");
+
+            // Check if the user is registered
+            const user = JSON.parse(localStorage.getItem(email));
+
+            if (user) {
+                if (user.password === password) {
+                    // Store the email of the logged-in user in localStorage
+                    localStorage.setItem('loggedInUser', email);
+
+                    // Redirect to index page after successful login
+                    window.location.href = "index.html";  // Redirect to the homepage/dashboard
+                } else {
+                    feedback.textContent = "Wrong password. Please try again.";
+                    feedback.classList.remove("hidden");
+                }
+            } else {
+                feedback.textContent = "Invalid credentials. Please try again.";
+                feedback.classList.remove("hidden");
+            }
+        });
+    </script>
+</body>
+</html>

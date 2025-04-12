@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>SmartHealth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-gray-100 font-roboto">
+    <!-- Language Selector -->
+    <div class="container mx-auto px-4 py-4 flex justify-end">
+        <select id="language-selector" class="border border-gray-300 rounded-md p-2">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी (Hindi)</option>
+            <option value="te">తెలుగు (Telugu)</option>
+            <option value="ta">தமிழ் (Tamil)</option>
+        </select>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a class="text-2xl font-bold text-green-600" href="#" id="nav-title">SmartHealth</a>
+            <div class="md:hidden">
+                <button class="text-gray-700 focus:outline-none" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <ul class="hidden md:flex space-x-6 items-center" id="nav-menu">
+                <li><a class="text-gray-700 hover:text-green-600" href="index.html" id="nav-home">Home</a></li>
+                <li><a class="text-gray-700 hover:text-green-600" href="about.html" id="nav-about">About</a></li>
+                <li><a class="text-gray-700 hover:text-green-600" href="services.html" id="nav-services">Services</a></li>
+                <li><a class="text-gray-700 hover:text-green-600" href="Lifestyles.html" id="nav-lifestyles">Lifestyles</a></li>
+
+                <li><a class="text-gray-700 hover:text-green-600" href="first-aid.html" id="nav-firstaid-mobile">First Aid</a></li>
+
+                <li><a class="text-gray-700 hover:text-green-600" href="contact.html" id="nav-contact">Contact</a></li>
+                <li><a class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold" href="signin.html" id="nav-signin">Sign In</a></li>
+                <li><a class="text-gray-700 hover:text-green-600" href="profile.html"><i class="fas fa-user-circle text-2xl"></i></a></li>
+            </ul>
+        </div>
+        <div class="hidden md:hidden bg-white shadow-md" id="nav-menu-mobile">
+            <ul class="flex flex-col space-y-4 p-4">
+                <li><a class="text-gray-700 hover:text-green-600" href="index.html" id="nav-home-mobile">Home</a></li>
+                <li><a class="text-gray-700 hover:text-green-600" href="about.html" id="nav-about-mobile">About</a></li>
+                <li><a class="text-gray-700 hover:text-green-600" href="services.html" id="nav-services-mobile">Services</a></li>
+                <li><a class="text-gray-700 hover:text-green-600" href="Lifestyles.html" id="nav-lifestyles-mobile">Lifestyles</a></li>
+                <li><a class="text-gray-700 hover:text-green-600" href="first-aid.html" id="nav-firstaid-mobile">First Aid</a></li>
+                <li><a class="text-gray-700 hover:text-green-600" href="contact.html" id="nav-contact-mobile">Contact</a></li>
+                <li><a class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold" href="signin.html" id="nav-signin-mobile">Sign In</a></li>
+                <li><a class="text-gray-700 hover:text-green-600" href="profile.html"><i class="fas fa-user-circle text-2xl"></i></a></li>
+            </ul>
+            
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-green-600 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-4" id="hero-title">Transforming Healthcare with AI</h1>
+            <p class="text-lg mb-8" id="hero-description">Experience the future of medical diagnosis with our cutting-edge AI technology.</p>
+            <a class="bg-white text-green-600 px-6 py-3 rounded-full font-semibold" href="#" id="hero-button">Get Started</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="bg-gray-200 py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img alt="Doctors using AI technology for diagnosis" class="rounded-lg shadow-md" height="300" src="https://storage.googleapis.com/a1aa/image/-oV4K1LTMkDni9z38IKn_0vLnb-HGA2iNa3YJmB7vCg.jpg" width="500"/>
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl font-bold mb-4" id="about-title">About Us</h2>
+                    <p class="text-gray-700 mb-4" id="about-description">SmartHealth is an AI-powered virtual health assistant designed to assist users with early disease prediction, symptom analysis, and general health guidance. By interpreting user-reported symptoms, SmartHealth can suggest possible conditions, identify early warning signs, and provide preventive advice. SmartHealth also offers tailored lifestyle tips on diet, exercise, and stress management to promote wellness, along with insights on over-the-counter medications, including usage and precautions. Equipped with a vast health knowledge base, SmartHealth empowers users to make informed health decisions and take proactive steps for improved well-being.</p>
+                    <a class="bg-green-600 text-white px-6 py-3 rounded-full font-semibold" href="#" id="about-button">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12" id="services-title">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <img alt="Icon representing AI-powered diagnosis" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/59Q4Z2edD5v9wfiRuYCpUv4kRk7nEY-eXhD-uwlEb60.jpg" width="100"/>
+                    <h3 class="text-xl font-semibold mb-2" id="service1-title">AI-Powered Diagnosis</h3>
+                    <p class="text-gray-600" id="service1-description">Utilizing advanced AI algorithms to provide accurate and timely medical diagnoses.</p>
+                    <a class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold mt-4 inline-block" href="symptom-checker.html" id="service1-button">Try Now</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <img alt="Icon representing test reports" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/4cg9eZlSG3PDP_siPTVj3AWwUIuHFfdA6z4eWKbCtFs.jpg" width="100"/>
+                    <h3 class="text-xl font-semibold mb-2" id="service2-title">Test Reports</h3>
+                    <p class="text-gray-600" id="service2-description">Upload and analyze your medical test reports for accurate insights.</p>
+                    <a class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold mt-4 inline-block" href="image-analysis.html" id="service2-button">Upload Reports</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <img alt="Icon representing lifestyle tips" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/05y_kpLL8kAMSSiBMCj3_TW-crs6GElSUO_AUbrQscY.jpg" width="100"/>
+                    <h3 class="text-xl font-semibold mb-2" id="service3-title">Lifestyle Tips</h3>
+                    <p class="text-gray-600" id="service3-description">Tips for a healthier life to improve your overall well-being.</p>
+                    <a class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold mt-4 inline-block" href="lifestyles.html" id="service3-button">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot Section (Hidden initially) -->
+    <div class="fixed bottom-4 right-4 bg-white shadow-lg rounded-lg p-4 hidden w-80 h-96 flex flex-col" id="chatbot-dialog">
+        <div class="flex justify-between items-center mb-4">
+            <h3 class="text-lg font-semibold text-gray-700" id="chatbot-title">SmartHealth Chat</h3>
+            <button class="text-gray-700 hover:text-red-600" id="chatbot-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chat-box border border-gray-300 p-4 h-64 overflow-y-auto bg-white rounded-md mb-4 shadow-md flex-grow" id="chatBox"></div>
+        <div class="flex">
+            <textarea class="flex-grow h-16 p-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-green-500" id="userInput" placeholder="Describe your symptoms..."></textarea>
+            <button class="bg-green-500 text-white py-2 px-4 rounded-r-md hover:bg-green-600 transition duration-300" onclick="getAIResponse()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Chatbot Button -->
+    <button class="fixed bottom-4 right-4 bg-green-600 text-white px-4 py-2 rounded-full" id="chatbot-toggle">Chat</button>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>©SmartHealth. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a class="text-white hover:text-green-600" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="text-white hover:text-green-600" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="text-white hover:text-green-600" href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="text-white hover:text-green-600" href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                title: "SmartHealth",
+                heroTitle: "Transforming Healthcare with AI",
+                heroDescription: "Experience the future of medical diagnosis with our cutting-edge AI technology.",
+                heroButton: "Get Started",
+                aboutTitle: "About Us",
+                aboutDescription: "SmartHealth is an AI-powered virtual health assistant designed to assist users with early disease prediction, symptom analysis, and general health guidance. By interpreting user-reported symptoms, SmartHealth can suggest possible conditions, identify early warning signs, and provide preventive advice. SmartHealth also offers tailored lifestyle tips on diet, exercise, and stress management to promote wellness, along with insights on over-the-counter medications, including usage and precautions. Equipped with a vast health knowledge base, SmartHealth empowers users to make informed health decisions and take proactive steps for improved well-being.",
+                aboutButton: "Learn More",
+                servicesTitle: "Our Services",
+                service1Title: "AI-Powered Diagnosis",
+                service1Description: "Utilizing advanced AI algorithms to provide accurate and timely medical diagnoses.",
+                service1Button: "Try Now",
+                service2Title: "Test Reports",
+                service2Description: "Upload and analyze your medical test reports for accurate insights.",
+                service2Button: "Upload Reports",
+                service3Title: "Lifestyle Tips",
+                service3Description: "Tips for a healthier life to improve your overall well-being.",
+                service3Button: "Learn More",
+                chatbotTitle: "SmartHealth Chat"
+            },
+            hi: {
+                title: "स्मार्ट हेल्थ",
+                heroTitle: "AI के साथ स्वास्थ्य सेवा में परिवर्तन",
+                heroDescription: "हमारी अत्याधुनिक AI तकनीक के साथ चिकित्सा निदान के भविष्य का अनुभव करें।",
+                heroButton: "शुरू करें",
+                aboutTitle: "हमारे बारे में",
+                aboutDescription: "स्मार्ट हेल्थ एक AI-संचालित वर्चुअल स्वास्थ्य सहायक है जो उपयोगकर्ताओं को प्रारंभिक रोग भविष्यवाणी, लक्षण विश्लेषण और सामान्य स्वास्थ्य मार्गदर्शन में सहायता करने के लिए डिज़ाइन किया गया है। उपयोगकर्ता-रिपोर्ट किए गए लक्षणों की व्याख्या करके, स्मार्ट हेल्थ संभावित स्थितियों का सुझाव दे सकता है, प्रारंभिक चेतावनी संकेतों की पहचान कर सकता है और निवारक सलाह प्रदान कर सकता है। स्मार्ट हेल्थ आहार, व्यायाम और तनाव प्रबंधन पर व्यक्तिगत जीवनशैली सुझाव भी प्रदान करता है ताकि कल्याण को बढ़ावा मिल सके, साथ ही ओवर-द-काउंटर दवाओं पर जानकारी भी प्रदान करता है, जिसमें उपयोग और सावधानियाँ शामिल हैं। एक विशाल स्वास्थ्य ज्ञान आधार के साथ, स्मार्ट हेल्थ उपयोगकर्ताओं को सूचित स्वास्थ्य निर्णय लेने और बेहतर कल्याण के लिए सक्रिय कदम उठाने के लिए सशक्त बनाता है।",
+                aboutButton: "और जानें",
+                servicesTitle: "हमारी सेवाएँ",
+                service1Title: "AI-संचालित निदान",
+                service1Description: "सटीक और समय पर चिकित्सा निदान प्रदान करने के लिए उन्नत AI एल्गोरिदम का उपयोग करना।",
+                service1Button: "अभी आज़माएँ",
+                service2Title: "परीक्षण रिपोर्ट",
+                service2Description: "सटीक अंतर्दृष्टि के लिए अपनी चिकित्सा परीक्षण रिपोर्ट अपलोड और विश्लेषण करें।",
+                service2Button: "रिपोर्ट अपलोड करें",
+                service3Title: "जीवनशैली सुझाव",
+                service3Description: "आपकी समग्र भलाई में सुधार के लिए एक स्वस्थ जीवन के लिए सुझाव।",
+                service3Button: "और जानें",
+                chatbotTitle: "स्मार्ट हेल्थ चैट"
+            },
+            te: {
+                title: "స్మార్ట్ హెల్త్",
+                heroTitle: "AI తో ఆరోగ్య సంరక్షణను మార్చడం",
+                heroDescription: "మా ఆధునిక AI సాంకేతికతతో వైద్య నిర్ధారణ యొక్క భవిష్యత్తును అనుభవించండి.",
+                heroButton: "ప్రారంభించండి",
+                aboutTitle: "మా గురించి",
+                aboutDescription: "స్మార్ట్ హెల్త్ అనేది వినియోగదారులకు ప్రారంభ వ్యాధి అంచనా, లక్షణాల విశ్లేషణ మరియు సాధారణ ఆరోగ్య మార్గదర్శకంలో సహాయపడటానికి రూపొందించబడిన AI ఆధారిత వర్చువల్ ఆరోగ్య సహాయకుడు. వినియోగదారు-రిపోర్ట్ చేసిన లక్షణాలను అర్థం చేసుకోవడం ద్వారా, స్మార్ట్ హెల్త్ సాధ్యమైన పరిస్థితులను సూచించగలదు, ప్రారంభ హెచ్చరిక సంకేతాలను గుర్తించగలదు మరియు నివారణ సలహాలను అందించగలదు. స్మార్ట్ హెల్త్ ఆహారం, వ్యాయామం మరియు ఒత్తిడి నిర్వహణపై వ్యక్తిగత జీవనశైలి సూచనలను అందిస్తుంది, ఆరోగ్యాన్ని ప్రోత్సహించడానికి, అలాగే ఓవర్-ది-కౌంటర్ మందులపై సమాచారం అందిస్తుంది, అందులో ఉపయోగం మరియు జాగ్రత్తలు ఉన్నాయి. విస్తృత ఆరోగ్య జ్ఞాన ఆధారంతో, స్మార్ట్ హెల్త్ వినియోగదారులకు సమాచార ఆరోగ్య నిర్ణయాలను తీసుకోవడానికి మరియు మెరుగైన ఆరోగ్యానికి ప్రాక్టివ్ చర్యలు తీసుకోవడానికి శక్తిని ఇస్తుంది.",
+                aboutButton: "మరింత తెలుసుకోండి",
+                servicesTitle: "మా సేవలు",
+                service1Title: "AI ఆధారిత నిర్ధారణ",
+                service1Description: "సరిగ్గా మరియు సమయానికి వైద్య నిర్ధారణలను అందించడానికి ఆధునిక AI ఆల్గోరిథమ్స్‌ను ఉపయోగించడం.",
+                service1Button: "ఇప్పుడు ప్రయత్నించండి",
+                service2Title: "పరీక్షా నివేదికలు",
+                service2Description: "సరిగ్గా అవగాహన కోసం మీ వైద్య పరీక్షా నివేదికలను అప్‌లోడ్ చేయండి.",
+                service2Button: "నివేదికలను అప్‌లోడ్ చేయండి",
+                service3Title: "జీవనశైలి సూచనలు",
+                service3Description: "మీ మొత్తం ఆరోగ్యాన్ని మెరుగుపరచడానికి ఆరోగ్యకరమైన జీవితం కోసం సూచనలు.",
+                service3Button: "మరింత తెలుసుకోండి",
+                chatbotTitle: "స్మార్ట్ హెల్త్ చాట్"
+            },
+            ta: {
+                title: "ஸ்மார்ட் ஹெல்த்",
+                heroTitle: "AI உடன் சுகாதாரத்தை மாற்றுதல்",
+                heroDescription: "எங்கள் முன்னணி AI தொழில்நுட்பத்துடன் மருத்துவக் கண்டுபிடிப்பின் எதிர்காலத்தை அனுபவிக்கவும்.",
+                heroButton: "தொடங்கவும்",
+                aboutTitle: "எங்களைப் பற்றி",
+                aboutDescription: "ஸ்மார்ட் ஹெல்த் என்பது பயனாளர்களுக்கு ஆரம்ப நோய் கணிப்பு, அறிகுறிகள் பகுப்பாய்வு மற்றும் பொதுவான சுகாதார வழிகாட்டுதலில் உதவுவதற்காக வடிவமைக்கப்பட்ட AI அடிப்படையிலான மெய்நிகர் சுகாதார உதவியாளர். பயனர்-அறிக்கையிடப்பட்ட அறிகுறிகளை விளக்குவதன் மூலம், ஸ்மார்ட் ஹெல்த் சாத்தியமான நிலைகளை பரிந்துரைக்கலாம், ஆரம்ப எச்சரிக்கைக் குறியீடுகளை அடையாளம் காணலாம் மற்றும் தடுப்பு ஆலோசனைகளை வழங்கலாம். ஸ்மார்ட் ஹெல்த் உணவு, உடற்பயிற்சி மற்றும் மன அழுத்த மேலாண்மையில் தனிப்பயனாக்கப்பட்ட வாழ்க்கை முறை குறிப்புகளை வழங்குகிறது, மேலும் மருத்துவக் கடைகளில் கிடைக்கும் மருந்துகள் பற்றிய தகவல்களையும், அவற்றின் பயன்பாடு மற்றும் எச்சரிக்கைகளை உள்ளடக்கியதாக வழங்குகிறது. பரந்த அளவிலான சுகாதார அறிவியல் அடிப்படையுடன், ஸ்மார்ட் ஹெல்த் பயனாளர்களுக்கு தகவல் அடிப்படையிலான சுகாதார முடிவுகளை எடுக்கவும், மேம்பட்ட நலனுக்காக முன்னேற்ற நடவடிக்கைகளை எடுக்கவும் அதிகாரம் அளிக்கிறது.",                servicesTitle: "எங்கள் சேவைகள்",
+                service1Title: "AI அடிப்படையிலான கண்டறிதல்",
+                service1Description: "சரியான மற்றும் நேரத்தில் மருத்துவக் கண்டறிதல்களை வழங்குவதற்காக முன்னணி AI ஆல்காரிதங்களைப் பயன்படுத்துகிறது.",
+                service1Button: "இப்போது முயற்சிக்கவும்",
+                service2Title: "சோதனை அறிக்கைகள்",
+                service2Description: "சரியான தகவலுக்கு உங்கள் மருத்துவ சோதனை அறிக்கைகளை பதிவேற்றவும் மற்றும் பகுப்பாய்வு செய்யவும்.",
+                service2Button: "அறிக்கைகளை பதிவேற்றவும்",
+                service3Title: "வாழ்க்கை முறை குறிப்புகள்",
+                service3Description: "உங்கள் மொத்த நலனை மேம்படுத்த ஆரோக்கியமான வாழ்க்கைக்கான குறிப்புகள்.",
+                service3Button: "மேலும் அறியவும்",
+                chatbotTitle: "ஸ்மார்ட் ஹெல்த் உரையாடல்"
+            }
+        };
+
+        // Function to change language
+        function changeLanguage(language) {
+            const translation = translations[language];
+            document.getElementById("nav-title").innerText = translation.title;
+            document.getElementById("hero-title").innerText = translation.heroTitle;
+            document.getElementById("hero-description").innerText = translation.heroDescription;
+            document.getElementById("hero-button").innerText = translation.heroButton;
+            document.getElementById("about-title").innerText = translation.aboutTitle;
+            document.getElementById("about-description").innerText = translation.aboutDescription;
+            document.getElementById("about-button").innerText = translation.aboutButton;
+            document.getElementById("services-title").innerText = translation.servicesTitle;
+            document.getElementById("service1-title").innerText = translation.service1Title;
+            document.getElementById("service1-description").innerText = translation.service1Description;
+            document.getElementById("service1-button").innerText = translation.service1Button;
+            document.getElementById("service2-title").innerText = translation.service2Title;
+            document.getElementById("service2-description").innerText = translation.service2Description;
+            document.getElementById("service2-button").innerText = translation.service2Button;
+            document.getElementById("service3-title").innerText = translation.service3Title;
+            document.getElementById("service3-description").innerText = translation.service3Description;
+            document.getElementById("service3-button").innerText = translation.service3Button;
+            document.getElementById("chatbot-title").innerText = translation.chatbotTitle;
+        }
+
+        // Event listener for language selection
+        document.getElementById("language-selector").addEventListener("change", function() {
+            const selectedLanguage = this.value;
+            changeLanguage(selectedLanguage);
+        });
+
+        // Initialize with default language (English)
+        changeLanguage("en");
+
+        // Chatbot functionality
+        const apiKey = 'AIzaSyCGOGGjRkryLzuy6-6sMh_aTolRcHGNae0'; // Move API key to backend
+        const chatBox = document.getElementById("chatBox");
+        const chatbotDialog = document.getElementById("chatbot-dialog");
+        const chatbotToggle = document.getElementById("chatbot-toggle");
+        const chatbotClose = document.getElementById("chatbot-close");
+        let conversationHistory = [];
+
+        // Toggle the chatbot dialog box visibility
+        chatbotToggle.addEventListener('click', function() {
+            chatbotDialog.classList.toggle('hidden');
+            chatbotToggle.classList.toggle('hidden');
+            if (!chatbotDialog.classList.contains('hidden')) {
+                startChat();
+            }
+        });
+
+        // Close the chatbot dialog box
+        chatbotClose.addEventListener('click', function() {
+            chatbotDialog.classList.add('hidden');
+            chatbotToggle.classList.remove('hidden');
+        });
+
+        // Start chat with a greeting message
+        function startChat() {
+            appendMessage("ai", "Hello! How can I assist you today?");
+        }
+
+        async function getAIResponse() {
+            const userText = document.getElementById("userInput").value.trim();
+            if (!userText) return;
+
+            // Append user message to chat
+            appendMessage("user", userText);
+            document.getElementById("userInput").value = "";
+
+            // Add user message to conversation history
+            conversationHistory.push({ role: "user", parts: [{ text: userText }] });
+
+            // Show loading indicator
+            const loadingMessage = appendMessage("ai", "Typing...");
+            loadingMessage.classList.add("loading");
+
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+
+            const requestBody = { contents: conversationHistory };
+
+            try {
+                const response = await fetch(url, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(requestBody)
+                });
+
+                const data = await response.json();
+                const aiText = data.candidates?.[0]?.content?.parts?.[0]?.text || "No response received";
+
+                // Remove loading indicator
+                loadingMessage.remove();
+
+                // Append AI response to chat
+                appendMessage("ai", aiText);
+
+                // Add AI response to conversation history
+                conversationHistory.push({ role: "model", parts: [{ text: aiText }] });
+
+            } catch (error) {
+                loadingMessage.remove();
+                appendMessage("ai", "Error: " + error.message);
+            }
+        }
+
+        function appendMessage(sender, text) {
+            const messageDiv = document.createElement("div");
+            messageDiv.className = sender === "user" ? "bg-green-100 text-right p-2 my-2 rounded-md shadow-sm" : "bg-gray-100 p-2 my-2 rounded-md shadow-sm";
+            messageDiv.innerText = text;
+            chatBox.appendChild(messageDiv);
+            chatBox.scrollTop = chatBox.scrollHeight;
+            return messageDiv;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>SmartHealth</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/botui/build/botui.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/botui/build/botui.min.css">
+</head>
+<body class="font-roboto bg-gray-100">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a class="text-2xl font-bold text-green-600" href="#">SmartHealth</a>
+      <ul class="flex space-x-6">
+        <li><a class="text-gray-700 hover:text-green-600" href="index.html">Home</a></li>
+        <li><a class="text-gray-700 hover:text-green-600" href="index.html">About</a></li>
+        <li><a class="text-gray-700 hover:text-green-600" href="services.html">Services</a></li>
+        <li><a class="text-gray-700 hover:text-green-600" href="Lifestyles.html">Lifestyles</a></li>
+        <li><a class="text-gray-700 hover:text-green-600" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <section class="bg-green-600 text-white py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl font-bold mb-4">Transforming Healthcare with AI</h1>
+      <p class="text-lg mb-8">Experience the future of medical diagnosis with our cutting-edge AI technology.</p>
+      <a class="bg-white text-green-600 px-6 py-3 rounded-full font-semibold" href="#">Get Started</a>
+    </div>
+  </section>
+  <!-- About Section -->
+  <section class="bg-gray-200 py-16">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <img alt="Doctors using AI technology for diagnosis" class="rounded-lg shadow-md" height="300" src="https://storage.googleapis.com/a1aa/image/dqWNkPfSJm0emkqeZupL5D5R9q63KsuSmp4vm1nPxjDk5BSoA.jpg" width="500"/>
+        </div>
+        <div class="md:w-1/2 md:pl-12">
+          <h2 class="text-3xl font-bold mb-4">About Us</h2>
+          <p class="text-gray-700 mb-4">SmartHealth is an AI-powered virtual health assistant designed to assist users with early disease prediction, symptom analysis, and general health guidance. By interpreting user-reported symptoms, SmartHealth can suggest possible conditions, identify early warning signs, and provide preventive advice. SmartHealth also offers tailored lifestyle tips on diet, exercise, and stress management to promote wellness, along with insights on over-the-counter medications, including usage and precautions. Equipped with a vast health knowledge base, SmartHealth empowers users to make informed health decisions and take proactive steps for improved well-being.</p>
+          <a class="bg-green-600 text-white px-6 py-3 rounded-full font-semibold" href="#">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <img alt="AI-powered diagnosis illustration showing a futuristic interface with medical data and AI elements" class="mx-auto mb-4 w-full h-auto" src="https://healthcaretransformers.com/wp-content/uploads/2021/10/roche-header-how-artificial-intelligence-in-diagnostics-is-transforming-healthcare.png"/>
+          <h3 class="text-xl font-semibold mb-2">AI-Powered Diagnosis</h3>
+          <p class="text-gray-600">Utilizing advanced AI algorithms to provide accurate and timely medical diagnoses.</p>
+          <a class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold mt-4 inline-block" href="symptom-checker.html">Try Now</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <img alt="Icon representing test reports" class="mx-auto mb-4 w-full h-auto" src="https://www.accelq.com/wp-content/uploads/2023/04/benefits-of-a-test-summary-report.png"/>
+          <h3 class="text-xl font-semibold mb-2">Test Reports</h3>
+          <p class="text-gray-600">Upload and analyze your medical test reports for accurate insights.</p>
+          <a class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold mt-4 inline-block" href="image-analysis.html">Upload Reports</a>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <img alt="Image representing a healthy lifestyle with various activities like exercise, healthy eating, and relaxation" class="mx-auto mb-4 w-full h-auto" src="https://www.protinex.com/blog/wp-content/uploads/2020/01/5-easy-ways-1.jpg"/>
+          <h3 class="text-xl font-semibold mb-2">Lifestyle Tips</h3>
+          <p class="text-gray-600">Tips for a healthier life to improve your overall well-being.</p>
+          <a class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold mt-4 inline-block" href="Lifestyles.html">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Chatbot Section -->
+  <div id="chatbot" class="fixed bottom-4 right-4 bg-white shadow-lg rounded-lg p-4 hidden">
+    <div id="botui-app"></div>
+  </div>
+  <button id="chatbot-toggle" class="fixed bottom-4 right-4 bg-green-600 text-white px-4 py-2 rounded-full">Chat</button>
+
+  <!-- Gallery Section -->
+  <section class="py-16 bg-gray-200">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Our Work in Action</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <img alt="Convolutional Neural Networks (CNNs) being used for medical image analysis" class="rounded-lg mb-4 w-full h-auto" src="https://storage.googleapis.com/a1aa/image/dke1dm5lBA18WaYhRfX2pBTpg9V48rgfS222EuAGV6En5BSoA.jpg"/>
+          <p class="text-gray-600">Convolutional Neural Networks (CNNs) being used for medical image analysis to detect anomalies and assist in diagnosis.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <img alt="Neural network used to develop the SmartHealth website" class="rounded-lg mb-4 w-full h-auto" src="https://storage.googleapis.com/a1aa/image/1thAm69OdeTzWqF8Y39Na7oXASFqA9kr4Pir72pgcv9WeAJUA.jpg"/>
+          <p class="text-gray-600">Neural network used to develop the SmartHealth website, ensuring a seamless and intelligent user experience.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <img alt="AI checks medical reports for accuracy and helps doctors make better decisions" class="rounded-lg mb-4 w-full h-auto" src="https://storage.googleapis.com/a1aa/image/STRfIzfchKk6v0dLVjnlPJABoVkBWnQGj4fpfeOADAoUayIhC.jpg"/>
+          <p class="text-gray-600">AI checks medical reports for accuracy and helps doctors make better decisions.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <img alt="AI-powered diagnostic tools" class="rounded-lg mb-4 w-full h-auto" src="https://storage.googleapis.com/a1aa/image/RNV4Y2XWRk4ee0OFOTHOHX1uafSFhe1GGFwNnqhJWdNemHIhC.jpg"/>
+          <p class="text-gray-600">AI-powered diagnostic tools providing accurate results.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <img alt="Doctors reviewing AI-generated reports" class="rounded-lg mb-4 w-full h-auto" src="https://storage.googleapis.com/a1aa/image/BIDVmneY2k0VaaOHQBoz6svJXSYEWuG16Y8rd7eurGMu8AJUA.jpg"/>
+          <p class="text-gray-600">Doctors reviewing AI-generated reports for better decision-making.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <img alt="Patient using telemedicine services" class="rounded-lg mb-4 w-full h-auto" src="https://storage.googleapis.com/a1aa/image/WIw0S3q9Y3LkKtmPXBX0rViu4Rosg7etEJjVHjjkv3BceAJUA.jpg"/>
+          <p class="text-gray-600">Patient using telemedicine services to consult with a healthcare professional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto px-4 text-center">
+      <p>©SmartHealth. All rights reserved.</p>
+      <div class="flex justify-center space-x-4 mt-4">
+        <a class="text-white hover:text-green-600" href="#"><i class="fab fa-facebook-f"></i></a>
+        <a class="text-white hover:text-green-600" href="#"><i class="fab fa-twitter"></i></a>
+        <a class="text-white hover:text-green-600" href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a class="text-white hover:text-green-600" href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+  
+ <!-- Chatbot Section (Hidden initially) -->
+<div id="chatbot-dialog" class="fixed bottom-4 right-4 bg-white shadow-lg rounded-lg p-4 hidden w-80 h-96">
+  <!-- Chat Box -->
+  <div id="chatBox" class="chat-box border border-gray-300 p-4 h-80 overflow-y-auto bg-white rounded-md mb-4 shadow-md"></div>
+
+  <!-- Input & Send Button -->
+  <div class="flex">
+      <textarea 
+          id="userInput" 
+          class="flex-grow h-16 p-2 border border-gray-300 rounded-l-md mb-2 focus:outline-none focus:ring-2 focus:ring-green-500" 
+          placeholder="Describe your symptoms..."
+      ></textarea>
+      <button 
+          onclick="getAIResponse()" 
+          class="bg-green-500 text-white py-2 px-4 rounded-r-md hover:bg-green-600 transition duration-300 mb-2"
+      >
+          <i class="fas fa-paper-plane"></i>
+      </button>
+  </div>
+</div>
+
+<!-- Chatbot Toggle Button -->
+<button id="chatbot-toggle" class="fixed bottom-4 right-4 bg-green-600 text-white px-4 py-2 rounded-full">
+  Chat
+</button>
+
+<script>
+  const apiKey = "AIzaSyDT2tbaWmlfCez5CE5BMVKRgO56b15fyLE"; // Move API key to backend 
+  const chatBox = document.getElementById("chatBox");
+  const chatbotDialog = document.getElementById("chatbot-dialog");
+  let conversationHistory = [];
+
+  // Toggle chatbot visibility
+  document.getElementById('chatbot-toggle').addEventListener('click', function() {
+      chatbotDialog.classList.toggle('hidden');
+      if (!chatbotDialog.classList.contains('hidden')) {
+          startChat();
+      }
+  });
+
+  // Start chat with a greeting message
+  function startChat() {
+      appendMessage("ai", "Hello! How can I assist you today?");
+  }
+
+  async function getAIResponse() {
+      const userText = document.getElementById("userInput").value.trim();
+      if (!userText) return;
+
+      // Append user message to chat
+      appendMessage("user", userText);
+      document.getElementById("userInput").value = "";
+
+      // Update conversation history
+      conversationHistory.push({ role: "user", parts: [{ text: userText }] });
+
+      const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+      const requestBody = { contents: conversationHistory };
+
+      try {
+          const response = await fetch(url, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(requestBody)
+          });
+
+          const data = await response.json();
+          const aiText = data.candidates?.[0]?.content?.parts?.[0]?.text || "No response received";
+
+          // Append AI response to chat
+          appendMessage("ai", aiText);
+
+          // Update conversation history
+          conversationHistory.push({ role: "model", parts: [{ text: aiText }] });
+
+      } catch (error) {
+          appendMessage("ai", "Error: " + error.message);
+      }
+  }
+
+  function appendMessage(sender, text) {
+      const messageDiv = document.createElement("div");
+      messageDiv.className = sender === "user" 
+          ? "bg-green-100 text-right p-2 my-2 rounded-md shadow-sm" 
+          : "bg-gray-100 p-2 my-2 rounded-md shadow-sm";
+      messageDiv.innerText = text;
+      chatBox.appendChild(messageDiv);
+      chatBox.scrollTop = chatBox.scrollHeight;
+  }
+</script>
+
+</body>
+</html>
