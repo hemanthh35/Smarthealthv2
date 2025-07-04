@@ -1,0 +1,20 @@
+{
+  "title": "SmartHealth",
+  "heroTitle": "Transforming Healthcare with AI",
+  "heroDescription": "Experience the future of medical diagnosis with our cutting-edge AI technology.",
+  "heroButton": "Get Started",
+  "aboutTitle": "About Us",
+  "aboutDescription": "SmartHealth is an AI-powered virtual health assistant designed to assist users with early disease prediction, symptom analysis, and general health guidance. By interpreting user-reported symptoms, SmartHealth can suggest possible conditions, identify early warning signs, and provide preventive advice. SmartHealth also offers tailored lifestyle tips on diet, exercise, and stress management to promote wellness, along with insights on over-the-counter medications, including usage and precautions. Equipped with a vast health knowledge base, SmartHealth empowers users to make informed health decisions and take proactive steps for improved well-being.",
+  "aboutButton": "Learn More",
+  "servicesTitle": "Our Services",
+  "service1Title": "AI-Powered Diagnosis",
+  "service1Description": "Utilizing advanced AI algorithms to provide accurate and timely medical diagnoses.",
+  "service1Button": "Try Now",
+  "service2Title": "Test Reports",
+  "service2Description": "Upload and analyze your medical test reports for accurate insights.",
+  "service2Button": "Upload Reports",
+  "service3Title": "Lifestyle Tips",
+  "service3Description": "Tips for a healthier life to improve your overall well-being.",
+  "service3Button": "Learn More",
+  "chatbotTitle": "SmartHealth Chat"
+}

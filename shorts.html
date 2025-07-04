@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ReelTime</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.5s ease-out forwards;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen font-sans">
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm p-4 flex justify-between items-center">
+    <h1 class="text-xl font-semibold text-gray-800">shorttips</h1>
+    <div class="mr-2">
+      <!-- Upload Icon Button -->
+      <button onclick="triggerUpload()" title="Upload Reel">
+        📤
+      </button>
+    </div>
+  </header>
+
+  <!-- Hidden Upload Inputs -->
+  <input id="videoInput" type="file" accept="video/*" required hidden>
+  <textarea id="captionInput" hidden></textarea>
+
+  <!-- Main Content -->
+  <main class="flex flex-col items-center py-10 space-y-12">
+    <div id="reelContainer" class="flex flex-col gap-8 items-center w-full">
+      <!-- Reels will appear here -->
+    </div>
+  </main>
+
+  <script>
+    const videoInput = document.getElementById('videoInput');
+    const captionInput = document.getElementById('captionInput');
+    const reelContainer = document.getElementById('reelContainer');
+
+    function triggerUpload() {
+      videoInput.click();
+    }
+
+    videoInput.addEventListener('change', () => {
+      const file = videoInput.files[0];
+      if (!file) return;
+
+      const caption = prompt("Enter a caption (optional):");
+      captionInput.value = caption || "";
+
+      const videoURL = URL.createObjectURL(file);
+
+      const reelHTML = `
+        <div class="relative w-[360px] h-[640px] bg-gray-900 rounded-xl overflow-hidden shadow-lg fade-in">
+          <video src="${videoURL}" class="w-full h-full object-cover" autoplay muted loop></video>
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-transparent to-transparent px-4 py-3 text-white">
+            <h3 class="text-lg font-semibold">@CurrentUser</h3>
+            <p class="text-sm">${captionInput.value}</p>
+          </div>
+          <div class="absolute right-3 bottom-28 flex flex-col space-y-4 text-white items-center">
+            <button>❤️<br><span class="text-sm">120</span></button>
+            <button>💬<br><span class="text-sm">34</span></button>
+            <button>🔗<br><span class="text-sm">Share</span></button>
+          </div>
+        </div>
+      `;
+
+      reelContainer.insertAdjacentHTML('afterbegin', reelHTML);
+      videoInput.value = "";
+    });
+  </script>
+
+</body>
+</html>

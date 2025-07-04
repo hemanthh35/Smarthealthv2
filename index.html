@@ -19,42 +19,33 @@
         </select>
     </div>
 
-    <!-- Navbar -->
-    <nav class="bg-white shadow-md">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a class="text-2xl font-bold text-green-600" href="#" id="nav-title">SmartHealth</a>
-            <div class="md:hidden">
-                <button class="text-gray-700 focus:outline-none" id="nav-toggle">
-                    <i class="fas fa-bars"></i>
-                </button>
+        <!-- Navbar -->
+        <nav class="bg-white shadow-md">
+            <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+              <a class="text-2xl font-bold text-green-600" href="index.html">SmartHealth</a>
+              <button class="text-gray-700 md:hidden" id="menuButton">
+                <i class="fas fa-bars"></i>
+        
+              </button>
+              <ul class="hidden md:flex space-x-6" id="navLinks">
+                <li><a class="text-gray-700 hover:text-green-600" href="index.html">Home</a></li>
+                <li><a class="text-gray-700 hover:text-green-600" href="about.html">About</a></li>
+                <li><a class="text-gray-700 hover:text-green-600" href="services.html">Services</a></li>
+                <li><a class="text-gray-700 hover:text-green-600" href="Lifestyles.html">Lifestyle Tips</a></li>
+                <li><a class="text-gray-700 hover:text-green-600" href="reels.html">Reels</a></li>
+                <li><a class="text-gray-700 hover:text-green-600" href="contact.html">Contact</a></li>
+              </ul>
             </div>
-            <ul class="hidden md:flex space-x-6 items-center" id="nav-menu">
-                <li><a class="text-gray-700 hover:text-green-600" href="index.html" id="nav-home">Home</a></li>
-                <li><a class="text-gray-700 hover:text-green-600" href="about.html" id="nav-about">About</a></li>
-                <li><a class="text-gray-700 hover:text-green-600" href="services.html" id="nav-services">Services</a></li>
-                <li><a class="text-gray-700 hover:text-green-600" href="Lifestyles.html" id="nav-lifestyles">Lifestyles</a></li>
-
-                <li><a class="text-gray-700 hover:text-green-600" href="first-aid.html" id="nav-firstaid-mobile">First Aid</a></li>
-
-                <li><a class="text-gray-700 hover:text-green-600" href="contact.html" id="nav-contact">Contact</a></li>
-                <li><a class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold" href="signin.html" id="nav-signin">Sign In</a></li>
-                <li><a class="text-gray-700 hover:text-green-600" href="profile.html"><i class="fas fa-user-circle text-2xl"></i></a></li>
+            <ul class="md:hidden hidden flex-col space-y-4 px-4 py-4 bg-white shadow-md" id="mobileNavLinks">
+              <li><a class="text-gray-700 hover:text-green-600" href="index.html">Home</a></li>
+              <li><a class="text-gray-700 hover:text-green-600" href="index.html">About</a></li>
+              <li><a class="text-gray-700 hover:text-green-600" href="services.html">Services</a></li>
+              <li><a class="text-gray-700 hover:text-green-600" href="Lifestyles.html">Lifestyles</a></li>
+              <li><a class="text-gray-700 hover:text-green-600" href="contact.html">Contact</a></li>
+               <li><a class="text-gray-700 hover:text-green-600" href="reels.html">Reels</a></li>
             </ul>
-        </div>
-        <div class="hidden md:hidden bg-white shadow-md" id="nav-menu-mobile">
-            <ul class="flex flex-col space-y-4 p-4">
-                <li><a class="text-gray-700 hover:text-green-600" href="index.html" id="nav-home-mobile">Home</a></li>
-                <li><a class="text-gray-700 hover:text-green-600" href="about.html" id="nav-about-mobile">About</a></li>
-                <li><a class="text-gray-700 hover:text-green-600" href="services.html" id="nav-services-mobile">Services</a></li>
-                <li><a class="text-gray-700 hover:text-green-600" href="Lifestyles.html" id="nav-lifestyles-mobile">Lifestyles</a></li>
-                <li><a class="text-gray-700 hover:text-green-600" href="first-aid.html" id="nav-firstaid-mobile">First Aid</a></li>
-                <li><a class="text-gray-700 hover:text-green-600" href="contact.html" id="nav-contact-mobile">Contact</a></li>
-                <li><a class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold" href="signin.html" id="nav-signin-mobile">Sign In</a></li>
-                <li><a class="text-gray-700 hover:text-green-600" href="profile.html"><i class="fas fa-user-circle text-2xl"></i></a></li>
-            </ul>
-            
-        </div>
-    </nav>
+          </nav>
+        
 
     <!-- Hero Section -->
     <section class="bg-green-600 text-white py-16">
@@ -256,7 +247,7 @@
         changeLanguage("en");
 
         // Chatbot functionality
-        const apiKey =""; // Move API key to backend
+        const apiKey ="AIzaSyDTaSXkRI-MBvNz5L2uD8gLvjwneYGOGXc"; // Move API key to backend
         const chatBox = document.getElementById("chatBox");
         const chatbotDialog = document.getElementById("chatbot-dialog");
         const chatbotToggle = document.getElementById("chatbot-toggle");
@@ -336,5 +327,14 @@
             return messageDiv;
         }
     </script>
+    <script>
+  const menuButton = document.getElementById('menuButton');
+  const mobileNavLinks = document.getElementById('mobileNavLinks');
+
+  menuButton.addEventListener('click', () => {
+    mobileNavLinks.classList.toggle('hidden');
+  });
+</script>
+
 </body>
 </html>

@@ -13,7 +13,33 @@
         #map { height: 500px; width: 100%; }
         #loading { display: none; }
     </style>
-</head>
+</head> 
+<nav class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a class="text-2xl font-bold text-green-600" href="index.html">SmartHealth</a>
+      <button class="text-gray-700 md:hidden" id="menuButton">
+        <i class="fas fa-bars"></i>
+
+      </button>
+      <ul class="hidden md:flex space-x-6" id="navLinks">
+        <li><a class="text-gray-700 hover:text-green-600" href="index.html">Home</a></li>
+        <li><a class="text-gray-700 hover:text-green-600" href="about.html">About</a></li>
+        <li><a class="text-gray-700 hover:text-green-600" href="services.html">Services</a></li>
+        <li><a class="text-gray-700 hover:text-green-600" href="Lifestyles.html">Lifestyle Tips</a></li>
+        <li><a class="text-gray-700 hover:text-green-600" href="reels.html">Reels</a></li>
+        <li><a class="text-gray-700 hover:text-green-600" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <ul class="md:hidden hidden flex-col space-y-4 px-4 py-4 bg-white shadow-md" id="mobileNavLinks">
+      <li><a class="text-gray-700 hover:text-green-600" href="index.html">Home</a></li>
+      <li><a class="text-gray-700 hover:text-green-600" href="index.html">About</a></li>
+      <li><a class="text-gray-700 hover:text-green-600" href="services.html">Services</a></li>
+      <li><a class="text-gray-700 hover:text-green-600" href="Lifestyles.html">Lifestyles</a></li>
+      <li><a class="text-gray-700 hover:text-green-600" href="contact.html">Contact</a></li>
+       <li><a class="text-gray-700 hover:text-green-600" href="reels.html">Reels</a></li>
+    </ul>
+  </nav>
+
 <body class="bg-gray-100 font-roboto">
 
     <nav class="bg-white shadow-md">
@@ -88,6 +114,8 @@
                             const name = hospital.tags.name || "Unnamed Facility";
                             const address = hospital.tags["addr:street"] || "No address available";
                             const phone = hospital.tags["contact:phone"] || "No phone number available";
+                            const website = hospital.tags["contact:website"] || "No website available";
+
                             const distance = getDistance(lat, lng, hospital.lat, hospital.lon).toFixed(2);
                             const photoUrl = "https://placehold.co/100x100?text=Healthcare"; 
 
@@ -101,7 +129,19 @@
                                 <img src="${photoUrl}" alt="Photo of ${name}" class="w-16 h-16 rounded mr-4">
                                 <div>
                                     <b>${name}</b><br>${address}<br>${phone}<br>Distance: ${distance} km
-                                </div>
+                                    ${website === "No website available"
+                                        ? "<p>No website available</p>"
+                                        : `<a href="${website}" target="_blank" class="text-blue-500 underline">Visit Website</a>`
+                                    }
+                                   
+                                     <button class="bg-blue-500 text-white px-2 py-1 rounded mt-2" onclick="openDirections(${hospital.lat}, ${hospital.lon})">
+                                      Directions
+                                    </button>
+                                  
+
+                                    
+
+                                </div>                           
                             `;
                             hospitalList.appendChild(listItem);
                         });
@@ -113,6 +153,12 @@
                     hospitalList.innerHTML = "<p class='text-red-500'>Failed to load data.</p>";
                 });
         }
+       function openDirections(lat, lng) {
+        const userLocation = `${userLat},${userLng}`;
+         const destination = `${lat},${lng}`;
+        const url = `https://www.google.com/maps/dir/?api=1&origin=${userLocation}&destination=${destination}`;
+       window.open(url, '_blank');
+     }
 
         function getDistance(lat1, lon1, lat2, lon2) {
             const R = 6371;

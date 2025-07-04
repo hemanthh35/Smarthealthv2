@@ -21,26 +21,27 @@
   <!-- Navbar -->
   <nav class="bg-white shadow-md">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-2xl font-bold text-green-600">Smart Health</a>
-      <button id="menuButton" class="text-gray-700 md:hidden">
+      <a class="text-2xl font-bold text-green-600" href="index.html">SmartHealth</a>
+      <button class="text-gray-700 md:hidden" id="menuButton">
         <i class="fas fa-bars"></i>
+
       </button>
-      <ul id="navLinks" class="hidden md:flex space-x-6">
-        <li><a href="index.html" class="text-gray-700 hover:text-green-600">Home</a></li>
-        <li><a href="about.html" class="text-gray-700 hover:text-green-600">About</a></li>
-        <li><a href="services.html" class="text-gray-700 hover:text-green-600">Services</a></li>
-        <li><a href="Lifestyles.html" class="text-gray-700 hover:text-green-600">Lifestyle Tips</a></li>
-        <li><a href="first-aid.html" class="text-gray-700 hover:text-green-600">First Aid</a></li>
-        <li><a href="contact.html" class="text-gray-700 hover:text-green-600">Contact</a></li>
+      <ul class="hidden md:flex space-x-6" id="navLinks">
+        <li><a class="text-gray-700 hover:text-green-600" href="index.html">Home</a></li>
+        <li><a class="text-gray-700 hover:text-green-600" href="about.html">About</a></li>
+        <li><a class="text-gray-700 hover:text-green-600" href="services.html">Services</a></li>
+        <li><a class="text-gray-700 hover:text-green-600" href="Lifestyles.html">Lifestyle Tips</a></li>
+        <li><a class="text-gray-700 hover:text-green-600" href="reels.html">Reels</a></li>
+        <li><a class="text-gray-700 hover:text-green-600" href="contact.html">Contact</a></li>
       </ul>
     </div>
-    <ul id="mobileNavLinks" class="md:hidden hidden flex-col space-y-4 px-4 py-4 bg-white shadow-md">
-      <li><a href="index.html" class="text-gray-700 hover:text-green-600">Home</a></li>
-      <li><a href="about.html" class="text-gray-700 hover:text-green-600">About</a></li>
-      <li><a href="services.html" class="text-gray-700 hover:text-green-600">Services</a></li>
-      <li><a href="Lifestyles.html" class="text-gray-700 hover:text-green-600">Lifestyle Tips</a></li>
-      <li><a href="first-aid.html" class="text-gray-700 hover:text-green-600">First Aid</a></li>
-      <li><a href="contact.html" class="text-gray-700 hover:text-green-600">Contact</a></li>
+    <ul class="md:hidden hidden flex-col space-y-4 px-4 py-4 bg-white shadow-md" id="mobileNavLinks">
+      <li><a class="text-gray-700 hover:text-green-600" href="index.html">Home</a></li>
+      <li><a class="text-gray-700 hover:text-green-600" href="index.html">About</a></li>
+      <li><a class="text-gray-700 hover:text-green-600" href="services.html">Services</a></li>
+      <li><a class="text-gray-700 hover:text-green-600" href="Lifestyles.html">Lifestyles</a></li>
+      <li><a class="text-gray-700 hover:text-green-600" href="contact.html">Contact</a></li>
+       <li><a class="text-gray-700 hover:text-green-600" href="reels.html">Reels</a></li>
     </ul>
   </nav>
   <!-- Header -->
@@ -66,7 +67,7 @@
 
       <div class="mb-4">
         <label for="prompt" class="block text-gray-700 font-semibold mb-2">Instructions:</label>
-        <input type="text" id="prompt" name="prompt" required placeholder="Enter instructions here" value="Assign a confidence score (0-100%) to each suggestion based on relevance, medical guidelines, and model accuracy. Present the recommendations in a structured format, prioritizing those with higher confidence scores food recommendations" class="w-full px-3 py-2 border border-gray-300 rounded-md"/>
+        <input type="text" id="prompt" name="prompt" required placeholder="Enter instructions here" value="You are a medical assistant AI. Based on the following lab test results, give a short summary of the key issues, and recommend appropriate foods and basic treatments. Keep the suggestions short, clear, and practical. Avoid technical jargon." class="w-full px-3 py-2 border border-gray-300 rounded-md"/>
       </div>
 
       <button type="submit" class="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition duration-300">Analyze</button>

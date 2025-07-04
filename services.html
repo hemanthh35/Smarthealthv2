@@ -28,13 +28,14 @@
                 <li><a class="text-gray-700 hover:text-green-600" href="about.html">About</a></li>
                 <li><a class="text-gray-700 hover:text-green-600" href="services.html">Services</a></li>
                 <li><a class="text-gray-700 hover:text-green-600" href="Lifestyles.html">Lifestyles</a></li>
-                <li><a class="text-gray-700 hover:text-green-600" href="first-aid.html">First Aid</a></li>
+                <li><a class="text-gray-700 hover:text-green-600" href="reels.html">Reels</a></li>
                 <li><a class="text-gray-700 hover:text-green-600" href="contact.html">Contact</a></li>
             </ul>
             <div class="md:hidden">
                 <button class="text-gray-700 focus:outline-none" id="menu-btn">
                     <i class="fas fa-bars"></i>
                 </button>
+                
             </div>
         </div>
         <div class="hidden md:hidden" id="mobile-menu">
@@ -44,6 +45,7 @@
                 <li><a class="text-gray-700 hover:text-green-600" href="services.html">Services</a></li>
                 <li><a class="text-gray-700 hover:text-green-600" href="Lifestyles.html">Lifestyles</a></li>
                 <li><a class="text-gray-700 hover:text-green-600" href="contact.html">Contact</a></li>
+                <li><a class="text-gray-700 hover:text-green-600" href="reels.html">Reels</a></li>
             </ul>
         </div>
     </nav>
@@ -52,18 +54,26 @@
     <section class="py-20 bg-green-300 flex-grow">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center text-green-800 mb-12" id="services-title">Our Services</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white p-6 rounded-lg shadow-md text-center border-2 border-gray-300 transition-transform transform hover:scale-105">
-                    <img alt="A detailed test summary report with various charts and data points" class="mx-auto mb-4" height="100" src="https://www.accelq.com/wp-content/uploads/2023/04/benefits-of-a-test-summary-report.png" width="100"/>
+                    <img src="https://www.accelq.com/wp-content/uploads/2023/04/benefits-of-a-test-summary-report.png" alt="Test report" class="mx-auto mb-4" width="100" height="100"/>
                     <h3 class="text-xl font-semibold mb-2" id="service1-title">Lab-Test Reports</h3>
                     <p class="text-gray-600" id="service1-description">Upload and analyze your medical test reports for accurate insights.</p>
-                    <a class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold mt-4 inline-block transition-colors hover:bg-green-700" href="image-analysis.html">Upload Reports</a>
+                    <a href="image-analysis.html" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold mt-4 inline-block transition-colors hover:bg-green-700">Upload Reports</a>
                 </div>
+
                 <div class="bg-white p-6 rounded-lg shadow-md text-center border-2 border-gray-300 transition-transform transform hover:scale-105">
-                    <img alt="X-ray analysis showing detailed medical insights" class="mx-auto mb-4" height="100" src="https://content.mymeds247.com/assets/images/health/XRay-Analysis.jpg" width="100"/>
+                    <img src="https://content.mymeds247.com/assets/images/health/XRay-Analysis.jpg" alt="X-ray analysis" class="mx-auto mb-4" width="100" height="100"/>
                     <h3 class="text-xl font-semibold mb-2" id="service2-title">Image Analysis</h3>
                     <p class="text-gray-600" id="service2-description">Upload X-rays, scans, and other medical images for AI-powered analysis.</p>
-                    <a class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold mt-4 inline-block transition-colors hover:bg-green-700" href="symptom-checker.html">Upload Images</a>
+                    <a href="symptom-checker.html" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold mt-4 inline-block transition-colors hover:bg-green-700">Upload Images</a>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md text-center border-2 border-gray-300 transition-transform transform hover:scale-105">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3875/3875149.png" alt="Symptom checker" class="mx-auto mb-4" width="100" height="100"/>
+                    <h3 class="text-xl font-semibold mb-2" id="service3-title">Symptom Checker</h3>
+                    <p class="text-gray-600" id="service3-description">Get AI-driven health suggestions based on your symptoms.</p>
+                    <a href="sp.html" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold mt-4 inline-block transition-colors hover:bg-green-700">Check Symptoms</a>
                 </div>
             </div>
         </div>
@@ -74,71 +84,80 @@
         <div class="container mx-auto px-4 text-center">
             <p>©SmartHealth. All rights reserved.</p>
             <div class="flex justify-center space-x-4 mt-4">
-                <a class="text-white hover:text-green-600" href="#"><i class="fab fa-facebook-f"></i></a>
-                <a class="text-white hover:text-green-600" href="#"><i class="fab fa-twitter"></i></a>
-                <a class="text-white hover:text-green-600" href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a class="text-white hover:text-green-600" href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white hover:text-green-600"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white hover:text-green-600"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white hover:text-green-600"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="text-white hover:text-green-600"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </footer>
 
     <script>
-        // Language Translations
         const translations = {
             en: {
                 servicesTitle: "Our Services",
                 service1Title: "Lab-Test Reports",
                 service1Description: "Upload and analyze your medical test reports for accurate insights.",
                 service2Title: "Image Analysis",
-                service2Description: "Upload X-rays, scans, and other medical images for AI-powered analysis."
+                service2Description: "Upload X-rays, scans, and other medical images for AI-powered analysis.",
+                service3Title: "Symptom Checker",
+                service3Description: "Get AI-driven health suggestions based on your symptoms."
             },
             hi: {
                 servicesTitle: "हमारी सेवाएँ",
                 service1Title: "लैब-टेस्ट रिपोर्ट",
                 service1Description: "सटीक अंतर्दृष्टि के लिए अपनी चिकित्सा परीक्षण रिपोर्ट अपलोड और विश्लेषण करें।",
                 service2Title: "छवि विश्लेषण",
-                service2Description: "AI-संचालित विश्लेषण के लिए एक्स-रे, स्कैन और अन्य चिकित्सा छवियों को अपलोड करें।"
+                service2Description: "AI-संचालित विश्लेषण के लिए एक्स-रे, स्कैन और अन्य चिकित्सा छवियों को अपलोड करें।",
+                service3Title: "लक्षण जांच",
+                service3Description: "आपके लक्षणों के आधार पर AI-संचालित स्वास्थ्य सुझाव प्राप्त करें।"
             },
             te: {
                 servicesTitle: "మా సేవలు",
                 service1Title: "ల్యాబ్-టెస్ట్ నివేదికలు",
                 service1Description: "సరిగ్గా అవగాహన కోసం మీ వైద్య పరీక్షా నివేదికలను అప్‌లోడ్ చేయండి మరియు విశ్లేషించండి.",
                 service2Title: "చిత్ర విశ్లేషణ",
-                service2Description: "AI ఆధారిత విశ్లేషణ కోసం X-రేలు, స్కాన్లు మరియు ఇతర వైద్య చిత్రాలను అప్‌లోడ్ చేయండి."
+                service2Description: "AI ఆధారిత విశ్లేషణ కోసం X-రేలు, స్కాన్లు మరియు ఇతర వైద్య చిత్రాలను అప్‌లోడ్ చేయండి.",
+                service3Title: "లక్షణాల తనిఖీ",
+                service3Description: "మీ లక్షణాల ఆధారంగా AI ఆధారిత ఆరోగ్య సూచనలు పొందండి."
             },
             ta: {
                 servicesTitle: "எங்கள் சேவைகள்",
                 service1Title: "அறிக்கைகள்",
                 service1Description: "சரியான தகவலுக்கு உங்கள் மருத்துவ சோதனை அறிக்கைகளை பதிவேற்றவும் மற்றும் பகுப்பாய்வு செய்யவும்.",
                 service2Title: "படங்கள்",
-                service2Description: "AI அடிப்படையிலான பகுப்பாய்வுக்கு X-கதிர்கள், ஸ்கான்கள் மற்றும் பிற மருத்துவ படங்களை பதிவேற்றவும்."
+                service2Description: "AI அடிப்படையிலான பகுப்பாய்வுக்கு X-கதிர்கள், ஸ்கான்கள் மற்றும் பிற மருத்துவ படங்களை பதிவேற்றவும்.",
+                service3Title: "அறிகுறி சோதனை",
+                service3Description: "உங்கள் அறிகுறிகளின் அடிப்படையில் AI வழிநடத்தும் பரிந்துரைகளைப் பெறுங்கள்."
             }
         };
 
-        // Function to change language
         function changeLanguage(language) {
-            const translation = translations[language];
-            document.getElementById("services-title").innerText = translation.servicesTitle;
-            document.getElementById("service1-title").innerText = translation.service1Title;
-            document.getElementById("service1-description").innerText = translation.service1Description;
-            document.getElementById("service2-title").innerText = translation.service2Title;
-            document.getElementById("service2-description").innerText = translation.service2Description;
+            const t = translations[language];
+            document.getElementById("services-title").innerText = t.servicesTitle;
+            document.getElementById("service1-title").innerText = t.service1Title;
+            document.getElementById("service1-description").innerText = t.service1Description;
+            document.getElementById("service2-title").innerText = t.service2Title;
+            document.getElementById("service2-description").innerText = t.service2Description;
+            document.getElementById("service3-title").innerText = t.service3Title;
+            document.getElementById("service3-description").innerText = t.service3Description;
         }
 
-        // Event listener for language selection
-        document.getElementById("language-selector").addEventListener("change", function() {
-            const selectedLanguage = this.value;
-            changeLanguage(selectedLanguage);
+        document.getElementById("language-selector").addEventListener("change", function () {
+            changeLanguage(this.value);
         });
 
-        // Initialize with default language (English)
         changeLanguage("en");
 
-        // Mobile menu toggle
-        document.getElementById('menu-btn').addEventListener('click', function() {
-            var menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
+        document.getElementById('menu-btn').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
         });
     </script>
+     <script>
+        document.getElementById("menuButton").addEventListener("click", function () {
+          const mobileNav = document.getElementById("mobileNavLinks");
+          mobileNav.classList.toggle("hidden");
+        });
+      </script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
@@ -6,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <style>
     .info-box {
       background-color: #e6ffed;
@@ -26,44 +28,42 @@
   </style>
 </head>
 <body class="bg-green-50 font-roboto">
-  <!-- Navbar -->
   <nav class="bg-white shadow-md">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-2xl font-bold text-green-600">Smart Health</a>
-      <ul class="hidden md:flex space-x-6">
-        <li><a href="index.html" class="text-gray-700 hover:text-green-600">Home</a></li>
-        <li><a href="about.html" class="text-gray-700 hover:text-green-600">About</a></li>
-        <li><a href="symptom-checker.html" class="text-gray-700 hover:text-green-600">Services</a></li>
-        <li><a href="Lifestyles.html" class="text-gray-700 hover:text-green-600">Lifestyle Tips</a></li>
-        <li><a href="contact.html" class="text-gray-700 hover:text-green-600">Contact</a></li>
-      </ul>
-      <div class="md:hidden">
-        <button class="text-gray-700 focus:outline-none" id="menu-btn">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-    </div>
-    <div class="hidden md:hidden" id="mobile-menu">
-      <ul class="flex flex-col space-y-4 px-4 py-4">
-        <li><a href="index.html" class="text-gray-700 hover:text-green-600">Home</a></li>
-        <li><a href="about.html" class="text-gray-700 hover:text-green-600">About</a></li>
-        <li><a href="symptom-checker.html" class="text-gray-700 hover:text-green-600">Services</a></li>
-        <li><a href="Lifestyles.html" class="text-gray-700 hover:text-green-600">Lifestyle Tips</a></li>
-        <li><a href="contact.html" class="text-gray-700 hover:text-green-600">Contact</a></li>
+      <a class="text-2xl font-bold text-green-600" href="index.html">SmartHealth</a>
+      <button class="text-gray-700 md:hidden" id="menuButton">
+        <i class="fas fa-bars"></i>
+
+      </button>
+      <ul class="hidden md:flex space-x-6" id="navLinks">
+        <li><a class="text-gray-700 hover:text-green-600" href="index.html">Home</a></li>
+        <li><a class="text-gray-700 hover:text-green-600" href="about.html">About</a></li>
+        <li><a class="text-gray-700 hover:text-green-600" href="services.html">Services</a></li>
+        <li><a class="text-gray-700 hover:text-green-600" href="Lifestyles.html">Lifestyle Tips</a></li>
+        <li><a class="text-gray-700 hover:text-green-600" href="reels.html">Reels</a></li>
+        <li><a class="text-gray-700 hover:text-green-600" href="contact.html">Contact</a></li>
       </ul>
     </div>
+    <ul class="md:hidden hidden flex-col space-y-4 px-4 py-4 bg-white shadow-md" id="mobileNavLinks">
+      <li><a class="text-gray-700 hover:text-green-600" href="index.html">Home</a></li>
+      <li><a class="text-gray-700 hover:text-green-600" href="index.html">About</a></li>
+      <li><a class="text-gray-700 hover:text-green-600" href="services.html">Services</a></li>
+      <li><a class="text-gray-700 hover:text-green-600" href="Lifestyles.html">Lifestyles</a></li>
+      <li><a class="text-gray-700 hover:text-green-600" href="contact.html">Contact</a></li>
+       <li><a class="text-gray-700 hover:text-green-600" href="reels.html">Reels</a></li>
+    </ul>
   </nav>
   <!-- Header -->
   <header class="h-36 flex items-center justify-center text-white bg-green-600 shadow-lg">
     <h1 class="text-2xl font-bold">AI-Powered Diagnosis</h1>
   </header>
+
   <!-- Main Content -->
   <main class="max-w-4xl mx-auto mt-8 bg-white p-6 rounded-lg shadow-md">
     <div class="info-box">
       <h2 class="text-green-600 text-lg font-bold mb-2">AI-Powered Diagnosis</h2>
       <p class="text-gray-700">
         Upload your medical image, and our AI will analyze it to provide insights.
-        
       </p>
     </div>
     <form id="healthForm">
@@ -77,13 +77,19 @@
 
       <div class="mb-4">
         <label for="prompt" class="block text-gray-700 font-semibold mb-2">Instructions:</label>
-        <input type="text" id="prompt" name="prompt" required placeholder="enter the reports here" class="w-full px-3 py-2 border border-gray-300 rounded-md"/>
+        <input type="text" id="prompt" name="prompt" required placeholder="enter the reports here" value="Analyze the uploaded medical image and provide a simple, easy-to-understand explanation of any visible abnormalities, what they might mean, and general advice on possible treatment, lifestyle, and diet changes to help manage the condition" class="w-full px-3 py-2 border border-gray-300 rounded-md"/>
       </div>
       <button type="submit" class="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition duration-300">Analyze</button>
     </form>
+    
     <p id="results" class="output mt-4 p-4 bg-gray-100 border border-gray-300 rounded-md text-gray-800 min-h-[50px]">(Results will appear here)</p>
+
+    <!-- PDF Button -->
+    <button id="downloadPDF" class="mt-4 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-300">Download PDF</button>
   </main>
+
   <div class="h-80"></div> <!-- Extra space above the footer -->
+
   <!-- Footer -->
   <footer class="bg-gray-800 text-white py-6">
     <div class="container mx-auto px-4 text-center">
@@ -115,6 +121,26 @@
     document.getElementById('menu-btn').addEventListener('click', function() {
       var menu = document.getElementById('mobile-menu');
       menu.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- PDF Download Script -->
+  <script>
+    document.getElementById("downloadPDF").addEventListener("click", () => {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+
+      const resultText = document.getElementById("results").innerText.trim();
+
+      if (!resultText || resultText === "(Results will appear here)") {
+        alert("No results to download!");
+        return;
+      }
+
+      doc.setFontSize(12);
+      doc.text("AI Diagnosis Report", 10, 10);
+      doc.text(resultText, 10, 20, { maxWidth: 180 });
+      doc.save("smart-health-report.pdf");
     });
   </script>
 

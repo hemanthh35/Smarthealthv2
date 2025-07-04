@@ -8,81 +8,82 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
  </head>
  <body class="font-roboto bg-gray-100">
-  <!-- Navbar -->
-  <nav class="bg-white shadow-md">
-   <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-    <a class="text-2xl font-bold text-green-600" href="#">SmartHealth</a>
-    <ul class="flex space-x-6 items-center">
-     <li><a class="text-gray-700 hover:text-green-600" href="index.html" data-en="Home" data-te="హోమ్" data-hi="होम">Home</a></li>
-     <li><a class="text-gray-700 hover:text-green-600" href="about.html" data-en="About" data-te="గురించి" data-hi="के बारे में">About</a></li>
-     <li><a class="text-gray-700 hover:text-green-600" href="services.html" data-en="Services" data-te="సేవలు" data-hi="सेवाएं">Services</a></li>
-     <li><a class="text-gray-700 hover:text-green-600" href="lifestyles.html" data-en="Lifestyles" data-te="జీవనశైలులు" data-hi="जीवनशैली">Lifestyles</a></li>
-     <li><a class="text-gray-700 hover:text-green-600" href="contact.html" data-en="Contact" data-te="సంప్రదించండి" data-hi="संपर्क करें">Contact</a></li>
-     <li><a class="text-gray-700 hover:text-green-600" href="first-aid.html" data-en="First Aid" data-te="మొదటి సహాయం" data-hi="प्राथमिक उपचार">First Aid</a></li>
-     <li class="relative">
-      <button class="text-gray-700 hover:text-green-600 focus:outline-none" id="languageDropdownButton">Language</button>
-      <div class="absolute right-0 mt-2 w-32 bg-white border rounded shadow-md hidden" id="languageDropdown">
-       <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100" href="#" onclick="setLanguage('en')">English</a>
-       <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100" href="#" onclick="setLanguage('te')">Telugu</a>
-       <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100" href="#" onclick="setLanguage('hi')">Hindi</a>
-      </div>
-     </li>
-    </ul>
-   </div>
-  </nav>
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+          <a class="text-2xl font-bold text-green-600" href="index.html">SmartHealth</a>
+          <button class="text-gray-700 md:hidden" id="menuButton">
+            <i class="fas fa-bars"></i>
+    
+          </button>
+          <ul class="hidden md:flex space-x-6" id="navLinks">
+            <li><a class="text-gray-700 hover:text-green-600" href="index.html">Home</a></li>
+            <li><a class="text-gray-700 hover:text-green-600" href="about.html">About</a></li>
+            <li><a class="text-gray-700 hover:text-green-600" href="services.html">Services</a></li>
+            <li><a class="text-gray-700 hover:text-green-600" href="Lifestyles.html">Lifestyle Tips</a></li>
+            <li><a class="text-gray-700 hover:text-green-600" href="reels.html">Reels</a></li>
+            <li><a class="text-gray-700 hover:text-green-600" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <ul class="md:hidden hidden flex-col space-y-4 px-4 py-4 bg-white shadow-md" id="mobileNavLinks">
+          <li><a class="text-gray-700 hover:text-green-600" href="index.html">Home</a></li>
+          <li><a class="text-gray-700 hover:text-green-600" href="index.html">About</a></li>
+          <li><a class="text-gray-700 hover:text-green-600" href="services.html">Services</a></li>
+          <li><a class="text-gray-700 hover:text-green-600" href="Lifestyles.html">Lifestyles</a></li>
+          <li><a class="text-gray-700 hover:text-green-600" href="contact.html">Contact</a></li>
+           <li><a class="text-gray-700 hover:text-green-600" href="reels.html">Reels</a></li>
+        </ul>
+      </nav>
   <!-- Header -->
   <header class="bg-green-600 text-white py-4">
-   <h1 class="text-3xl text-center font-bold" data-en="SmartHealth Features" data-te="స్మార్ట్ హెల్త్ ఫీచర్లు" data-hi="स्मार्टहेल्थ विशेषताएं">SmartHealth Features</h1>
+   <h1 class="text-3xl text-center font-bold">SmartHealth Features</h1>
   </header>
   <div class="container mx-auto px-4 py-8">
    <section class="mb-8">
-    <h2 class="text-2xl font-bold mb-4" data-en="AI-Powered Diagnosis" data-te="AI ఆధారిత నిర్ధారణ" data-hi="एआई-संचालित निदान">AI-Powered Diagnosis</h2>
-    <p class="text-gray-700 mb-4" data-en="At SmartHealth, we leverage the power of cutting-edge Artificial Intelligence to provide users with fast and accurate health insights through our AI-Powered Diagnosis." data-te="స్మార్ట్ హెల్త్•లో, మేము మా AI ఆధారిత నిర్ధారణ ద్వారా వినియోగదారులకు వేగవంతమైన మరియు ఖచ్చితమైన ఆరోగ్య అంతర్దృష్టులను అందించడానికి ఆధునిక కృత్రిమ మేధస్సు శక్తిని ఉపయోగిస్తాము." data-hi="स्मार्टहेल्थ में, हम अपने एआई-संचालित निदान के माध्यम से उपयोगकर्ताओं को तेज और सटीक स्वास्थ्य अंतर्दृष्टि प्रदान करने के लिए अत्याधुनिक कृत्रिम बुद्धिमत्ता की शक्ति का उपयोग करते हैं।">At SmartHealth, we leverage the power of cutting-edge Artificial Intelligence to provide users with fast and accurate health insights through our AI-Powered Diagnosis.</p>
-    <p class="text-gray-700 mb-4" data-en="<strong>Receive Instant Feedback:</strong> Users receive immediate suggestions, offering a potential diagnosis and guiding them toward the next best steps for their health." data-te="<strong>తక్షణ ఫీడ్•బ్యాక్ పొందండి:</strong> వినియోగదారులు తక్షణ సూచనలను అందుకుంటారు, ఇది సాధ్యమైన నిర్ధారణను అందిస్తుంది మరియు వారి ఆరోగ్యానికి తదుపరి ఉత్తమ చర్యల వైపు మార్గనిర్దేశం చేస్తుంది." data-hi="<strong>तत्काल प्रतिक्रिया प्राप्त करें:</strong> उपयोगकर्ताओं को तत्काल सुझाव प्राप्त होते हैं, संभावित निदान की पेशकश करते हैं और उन्हें उनके स्वास्थ्य के लिए अगले सर्वोत्तम कदमों की ओर मार्गदर्शन करते हैं।"><strong>Receive Instant Feedback:</strong> Users receive immediate suggestions, offering a potential diagnosis and guiding them toward the next best steps for their health.</p>
-    <p class="text-gray-700 mb-4" data-en="<strong>Understand Potential Conditions:</strong> The AI helps users identify conditions they may not have considered, highlighting the severity of symptoms and flagging situations where medical attention may be needed." data-te="<strong>సాధ్యమైన పరిస్థితులను అర్థం చేసుకోండి:</strong> AI వినియోగదారులు పరిగణనలోకి తీసుకోని పరిస్థితులను గుర్తించడంలో సహాయపడుతుంది, లక్షణాల తీవ్రతను హైలైట్ చేస్తుంది మరియు వైద్య శ్రద్ధ అవసరం కావచ్చు." data-hi="<strong>संभावित स्थितियों को समझें:</strong> एआई उपयोगकर्ताओं को उन स्थितियों की पहचान करने में मदद करता है जिन पर उन्होंने विचार नहीं किया हो सकता है, लक्षणों की गंभीरता को उजागर करता है और उन स्थितियों को चिह्नित करता है जहां चिकित्सा ध्यान देने की आवश्यकता हो सकती है।"><strong>Understand Potential Conditions:</strong> The AI helps users identify conditions they may not have considered, highlighting the severity of symptoms and flagging situations where medical attention may be needed.</p>
-    <p class="text-gray-700 mb-4" data-en="<strong>Access In-Depth Information:</strong> Users can explore a comprehensive breakdown of suggested conditions, including causes, key symptoms, treatment options, and preventive measures." data-te="<strong>సమగ్ర సమాచారం పొందండి:</strong> వినియోగదారులు సూచించిన పరిస్థితుల సమగ్ర వివరాలను అన్వేషించవచ్చు, ఇందులో కారణాలు, ముఖ్య లక్షణాలు, చికిత్సా ఎంపికలు మరియు నివారణ చర్యలు ఉన్నాయి." data-hi="<strong>गहन जानकारी प्राप्त करें:</strong> उपयोगकर्ता सुझाई गई स्थितियों का व्यापक विवरण, जिसमें कारण, प्रमुख लक्षण, उपचार विकल्प और निवारक उपाय शामिल हैं, का पता लगा सकते हैं।"><strong>Access In-Depth Information:</strong> Users can explore a comprehensive breakdown of suggested conditions, including causes, key symptoms, treatment options, and preventive measures.</p>
+    <h2 class="text-2xl font-bold mb-4">AI-Powered Diagnosis</h2>
+    <p class="text-gray-700 mb-4"><strong>Receive Instant Feedback:</strong> Users receive immediate suggestions, offering a potential diagnosis and guiding them toward the next best steps for their health.</p>
+    <p class="text-gray-700 mb-4"><strong>Understand Potential Conditions:</strong> The AI helps users identify conditions they may not have considered, highlighting the severity of symptoms and flagging situations where medical attention may be needed.</p>
+    <p class="text-gray-700 mb-4"><strong>Access In-Depth Information:</strong> Users can explore a comprehensive breakdown of suggested conditions, including causes, key symptoms, treatment options, and preventive measures.</p>
    </section>
    <section class="mb-8">
-    <h2 class="text-2xl font-bold mb-4" data-en="Test Reports" data-te="పరీక్షా నివేదికలు" data-hi="परीक्षण रिपोर्ट">Test Reports</h2>
-    <p class="text-gray-700 mb-4" data-en="Managing your health has never been easier with Test Reports at SmartHealth." data-te="స్మార్ట్ హెల్త్•లో పరీక్షా నివేదికలతో మీ ఆరోగ్యాన్ని నిర్వహించడం ఎప్పుడూ సులభం కాదు." data-hi="स्मार्टहेल्थ में परीक्षण रिपोर्ट के साथ अपने स्वास्थ्य का प्रबंधन करना कभी आसान नहीं रहा।">Managing your health has never been easier with Test Reports at SmartHealth.</p>
-    <p class="text-gray-700 mb-4" data-en="<strong>Clear Explanations:</strong> Our system offers detailed, easy-to-understand interpretations of your test results." data-te="<strong>స్పష్టమైన వివరణలు:</strong> మా వ్యవస్థ మీ పరీక్షా ఫలితాల యొక్క వివరణాత్మక, సులభంగా అర్థమయ్యే వివరణలను అందిస్తుంది." data-hi="<strong>स्पष्ट स्पष्टीकरण:</strong> हमारी प्रणाली आपके परीक्षण परिणामों की विस्तृत, आसानी से समझ में आने वाली व्याख्याएं प्रदान करती है।"><strong>Clear Explanations:</strong> Our system offers detailed, easy-to-understand interpretations of your test results.</p>
-    <p class="text-gray-700 mb-4" data-en="<strong>Actionable Recommendations:</strong> Based on your test results, SmartHealth provides suggestions for next steps." data-te="<strong>చర్యల సిఫారసులు:</strong> మీ పరీక్షా ఫలితాల ఆధారంగా, స్మార్ట్ హెల్త్ తదుపరి చర్యల కోసం సూచనలను అందిస్తుంది." data-hi="<strong>कार्रवाई योग्य सिफारिशें:</strong> आपके परीक्षण परिणामों के आधार पर, स्मार्टहेल्थ अगले चरणों के लिए सुझाव प्रदान करता है।"><strong>Actionable Recommendations:</strong> Based on your test results, SmartHealth provides suggestions for next steps.</p>
-    <p class="text-gray-700 mb-4" data-en="<strong>Secure and Accessible Storage:</strong> All uploaded reports are safely stored on our platform for easy access." data-te="<strong>భద్రత మరియు సులభంగా ప్రాప్యత:</strong> అన్ని అప్•లోడ్ చేసిన నివేదికలు సులభంగా ప్రాప్యత కోసం మా ప్లాట్•ఫారమ్•లో సురక్షితంగా నిల్వ చేయబడతాయి." data-hi="<strong>सुरक्षित और सुलभ भंडारण:</strong> सभी अपलोड की गई रिपोर्टों को आसान पहुंच के लिए हमारे प्लेटफॉर्म पर सुरक्षित रूप से संग्रहीत किया जाता है।"><strong>Secure and Accessible Storage:</strong> All uploaded reports are safely stored on our platform for easy access.</p>
+    <h2 class="text-2xl font-bold mb-4">Test Reports</h2>
+    <p class="text-gray-700 mb-4"><strong>Clear Explanations:</strong> Our system offers detailed, easy-to-understand interpretations of your test results.</p>
+    <p class="text-gray-700 mb-4"><strong>Actionable Recommendations:</strong> Based on your test results, SmartHealth provides suggestions for next steps.</p>
+    <p class="text-gray-700 mb-4"><strong>Secure and Accessible Storage:</strong> All uploaded reports are safely stored on our platform for easy access.</p>
    </section>
    <section class="mb-8">
-    <h2 class="text-2xl font-bold mb-4" data-en="Articles" data-te="వ్యాసాలు" data-hi="लेख">Articles</h2>
+    <h2 class="text-2xl font-bold mb-4">Articles</h2>
     <article class="bg-white p-6 rounded-lg shadow-md mb-4">
-     <h3 class="text-xl font-semibold mb-2" data-en="The Future of AI in Healthcare" data-te="ఆరోగ్య సంరక్షణలో AI భవిష్యత్తు" data-hi="स्वास्थ्य देखभाल में एआई का भविष्य">The Future of AI in Healthcare</h3>
-     <p class="text-gray-700" data-en="Artificial Intelligence is revolutionizing the healthcare industry by providing more accurate diagnoses, personalized treatment plans, and predictive analytics." data-te="కృత్రిమ మేధస్సు మరింత ఖచ్చితమైన నిర్ధారణలు, వ్యక్తిగత చికిత్సా ప్రణాళికలు మరియు అంచనా విశ్లేషణలను అందించడం ద్వారా ఆరోగ్య సంరక్షణ పరిశ్రమను విప్లవీకరిస్తోంది." data-hi="कृत्रिम बुद्धिमत्ता अधिक सटीक निदान, व्यक्तिगत उपचार योजनाएं और भविष्यवाणी विश्लेषण प्रदान करके स्वास्थ्य देखभाल उद्योग में क्रांति ला रही है।">Artificial Intelligence is revolutionizing the healthcare industry by providing more accurate diagnoses, personalized treatment plans, and predictive analytics.</p>
+     <h3 class="text-xl font-semibold mb-2">The Future of AI in Healthcare</h3>
+     <p class="text-gray-700">Explore how AI is transforming the healthcare landscape—from predictive diagnostics to personalized treatment plans.</p>
     </article>
     <article class="bg-white p-6 rounded-lg shadow-md mb-4">
-     <h3 class="text-xl font-semibold mb-2" data-en="How to Maintain a Healthy Lifestyle" data-te="ఆరోగ్యకరమైన జీవనశైలిని ఎలా నిర్వహించాలి" data-hi="स्वस्थ जीवनशैली कैसे बनाए रखें">How to Maintain a Healthy Lifestyle</h3>
-     <p class="text-gray-700" data-en="Maintaining a healthy lifestyle involves regular exercise, a balanced diet, adequate sleep, and stress management." data-te="ఆరోగ్యకరమైన జీవనశైలిని నిర్వహించడం అంటే క్రమం తప్పని వ్యాయామం, సమతుల్య ఆహారం, తగినంత నిద్ర మరియు ఒత్తిడి నిర్వహణ." data-hi="स्वस्थ जीवनशैली बनाए रखना नियमित व्यायाम, संतुलित आहार, पर्याप्त नींद और तनाव प्रबंधन शामिल है।">Maintaining a healthy lifestyle involves regular exercise, a balanced diet, adequate sleep, and stress management.</p>
-    </article>
-    <article class="bg-white p-6 rounded-lg shadow-md mb-4">
-     <h3 class="text-xl font-semibold mb-2" data-en="The Importance of Regular Health Check-ups" data-te="నియమిత ఆరోగ్య తనిఖీల ప్రాముఖ్యత" data-hi="नियमित स्वास्थ्य जांच का महत्व">The Importance of Regular Health Check-ups</h3>
-     <p class="text-gray-700" data-en="Regular health check-ups can help detect potential health issues early, allowing for timely intervention and better health outcomes." data-te="నియమిత ఆరోగ్య తనిఖీలు సాధ్యమైన ఆరోగ్య సమస్యలను ప్రారంభ దశలో గుర్తించడంలో సహాయపడతాయి, సమయానుకూల జోక్యాన్ని మరియు మెరుగైన ఆరోగ్య ఫలితాలను అనుమతిస్తాయి." data-hi="नियमित स्वास्थ्य जांच संभावित स्वास्थ्य समस्याओं का शीघ्र पता लगाने में मदद कर सकती है, जिससे समय पर हस्तक्षेप और बेहतर स्वास्थ्य परिणाम प्राप्त हो सकते हैं।">Regular health check-ups can help detect potential health issues early, allowing for timely intervention and better health outcomes.</p>
-    </article>
-   </section>
-   <section class="mb-8">
-    <h2 class="text-2xl font-bold mb-4" data-en="Lifestyle Tips for a Healthier Life" data-te="ఆరోగ్యకరమైన జీవితానికి జీవనశైలి చిట్కాలు" data-hi="स्वस्थ जीवन के लिए जीवनशैली युक्तियाँ">Lifestyle Tips for a Healthier Life</h2>
-    <article class="bg-white p-6 rounded-lg shadow-md mb-4">
-     <h3 class="text-xl font-semibold mb-2" data-en="Healthy Eating" data-te="ఆరోగ్యకరమైన ఆహారం" data-hi="स्वस्थ भोजन">Healthy Eating</h3>
-     <p class="text-gray-700" data-en="Eating a balanced diet rich in fruits, vegetables, whole grains, and lean proteins can improve your overall health and well-being." data-te="పండ్లు, కూరగాయలు, సంపూర్ణ ధాన్యాలు మరియు లీన ప్రోటీన్లతో సమతుల్య ఆహారం తినడం మీ మొత్తం ఆరోగ్యాన్ని మరియు శ్రేయస్సును మెరుగుపరచగలదు." data-hi="फलों, सब्जियों, साबुत अनाज और दुबले प्रोटीन से भरपूर संतुलित आहार खाने से आपके समग्र स्वास्थ्य और कल्याण में सुधार हो सकता है।">Eating a balanced diet rich in fruits, vegetables, whole grains, and lean proteins can improve your overall health and well-being.</p>
+     <h3 class="text-xl font-semibold mb-2">Preventive Care Tips</h3>
+     <p class="text-gray-700">Simple lifestyle changes and habits that can prevent chronic diseases and boost your overall well-being.</p>
     </article>
    </section>
   </div>
   <script>
-   document.getElementById('languageDropdownButton').addEventListener('click', function() {
-    document.getElementById('languageDropdown').classList.toggle('hidden');
+   const dropdownBtn = document.getElementById("languageDropdownButton");
+   const dropdown = document.getElementById("languageDropdown");
+   dropdownBtn.addEventListener("click", () => {
+    dropdown.classList.toggle("hidden");
    });
 
-   function setLanguage(language) {
-    document.querySelectorAll('[data-en]').forEach(function(element) {
-     element.innerHTML = element.getAttribute('data-' + language);
+   function setLanguage(lang) {
+    const elements = document.querySelectorAll("[data-" + lang + "]");
+    document.querySelectorAll("[data-en], [data-te], [data-hi]").forEach((el) => {
+     if (el.dataset[lang]) {
+      el.innerHTML = el.dataset[lang];
+     }
     });
-    document.getElementById('languageDropdown').classList.add('hidden');
+    dropdown.classList.add("hidden");
    }
+  </script>
+   <script>
+    document.getElementById("menuButton").addEventListener("click", function () {
+      const mobileNav = document.getElementById("mobileNavLinks");
+      mobileNav.classList.toggle("hidden");
+    });
   </script>
  </body>
 </html>
