@@ -9,7 +9,7 @@ import './styles.css';
 // Get your Gemini API key by:
 // - Selecting "Add Gemini API" in the "Project IDX" panel in the sidebar
 // - Or by visiting https://g.co/ai/idxGetGeminiKey
-let API_KEY = 'AIzaSyD-T-Tcr57o5057ut2hRVZrjEm8oz0D2wk';
+let API_KEY = 'AIzaSyBdRSSklKN4ALYvMMwX2LFsk375n5JWvaQ';
 
 let form = document.querySelector('form');
 let promptInput = document.querySelector('input[name="prompt"]');
@@ -48,7 +48,7 @@ form.onsubmit = async (ev) => {
     // Call the multimodal model, and get a stream of results
     const genAI = new GoogleGenerativeAI(API_KEY);
     const model = genAI.getGenerativeModel({
-      model: "gemini-1.5-flash", // or gemini-1.5-pro
+      model: "gemini-pro-vision",
       safetySettings: [
         {
           category: HarmCategory.HARM_CATEGORY_HARASSMENT,
@@ -73,6 +73,3 @@ form.onsubmit = async (ev) => {
 
 // You can delete this once you've filled out an API key
 maybeShowApiKeyBanner(API_KEY);
-
-
-
