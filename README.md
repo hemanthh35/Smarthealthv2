@@ -63,3 +63,4 @@ SmartHealth aims to democratize healthcare access, support early disease detecti
 - Medical datasets sourced from Kaggle, comprising over 6,000+ labeled medical images, including chest X-rays, brain MRIs, and diagnostic data for lung cancer, brain tumors, and diabetes prediction.
 - Medical research papers and health informatics sources.
 
+# smart
